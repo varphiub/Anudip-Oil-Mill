@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gallery | Anudip Oil Mill</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+
+    <!-- Common CSS -->
+    <link rel="stylesheet" href="../css/common.css">
+
+    <!-- Gallery CSS -->
+    <link rel="stylesheet" href="../css/gallery.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="site-header">
+
+        <div class="container nav-container">
+
+            <!-- Logo -->
+            <a href="index.html" class="logo">
+
+                <div class="logo-icon">
+                    <img src="C:\Users\Fakruddin\Desktop\MERN_AI\Anudip-Oil-Mill\public\anudip_oil_mill_brand_logo.png" alt="Anudip Oil Mill Logo">
+                </div>
+
+                <span>Anudip Oil Mill</span>
+
+            </a>
+
+            <!-- Mobile Menu Button -->
+            <button id="menuBtn" class="menu-btn">
+                <span class="material-symbols-outlined">
+                    menu
+                </span>
+            </button>
+
+            <!-- Navigation -->
+            <nav id="navLinks" class="nav-links">
+
+                <a href="index.html">Home</a>
+
+                <a href="about.html">About Us</a>
+
+                <a href="products.html">Products</a>
+
+                <a href="process.html">
+                    Manufacturing Process
+                </a>
+
+                <a href="quality.html">Quality</a>
+
+                <a href="gallery.html" class="active">
+                    Gallery
+                </a>
+
+                <a href="contact.html">Contact Us</a>
+
+            </nav>
+
+            <!-- Cart -->
+            <div class="header-actions">
+
+                <button class="cart-btn">
+
+                    <span class="material-symbols-outlined">
+                        shopping_bag
+                    </span>
+
+                    <span id="cartCounter">
+                        Cart (0)
+                    </span>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main>
+
+        <!-- ================= GALLERY INTRO ================= -->
+
+        <section class="gallery-intro">
+
+            <div class="container">
+
+                <div class="intro-content">
+
+                    <h1>
+                        Our Gallery
+                    </h1>
+
+                    <p>
+                        A glimpse into our natural ingredients,
+                        authentic wood press extraction,
+                        and dedicated artisans.
+                    </p>
+
+                </div>
+
+
+                <!-- Simple Information Cards -->
+
+                <div class="gallery-highlights">
+
+                    <div class="highlight-card">
+
+                        <span class="material-symbols-outlined">
+                            nature
+                        </span>
+
+                        <div>
+                            <strong>Natural</strong>
+                            <small>Selected Ingredients</small>
+                        </div>
+
+                    </div>
+
+
+                    <div class="highlight-card">
+
+                        <span class="material-symbols-outlined">
+                            eco
+                        </span>
+
+                        <div>
+                            <strong>Traditional</strong>
+                            <small>Oil Extraction</small>
+                        </div>
+
+                    </div>
+
+
+                    <div class="highlight-card">
+
+                        <span class="material-symbols-outlined">
+                            precision_manufacturing
+                        </span>
+
+                        <div>
+                            <strong>Artisan</strong>
+                            <small>Mill Craftsmanship</small>
+                        </div>
+
+                    </div>
+
+
+                    <div class="highlight-card">
+
+                        <span class="material-symbols-outlined">
+                            verified
+                        </span>
+
+                        <div>
+                            <strong>Quality</strong>
+                            <small>Carefully Processed</small>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= FEATURED PREVIEW ================= -->
+
+        <section class="featured-section">
+
+            <div class="container">
+
+                <div class="featured-card">
+
+                    <!-- Featured Image -->
+
+                    <div class="featured-image">
+
+                        <img
+                            id="featuredImage"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrCMwTEOZMVAA6PLKakQqScADDeFyzJawdJCJPrBoDbPBngtHYiARKAN_a3x5Fk-PnWJTMk3l7vIbAOoJpKhTByn5ye-9Lm3zqPTKzjBWaySbDHqt6SqQaLQ45vyH0pbvCchgReN2zMCGJdQxL-BAjuSr-k_G_iyiITWBjhAKKdOOeB7XJs38XyD5mLGoQBMML1Jtjx6FqV_b1lXfXK-tjSPtMk05dHHyAYQQ6fNy61tgkrLlGilRn"
+                            alt="Golden Groundnut Oil">
+
+                        <div class="image-tag">
+
+                            <span class="dot"></span>
+
+                            <span id="featuredTag">
+                                Wood Pressed Groundnut
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Featured Content -->
+
+                    <div class="featured-content">
+
+                        <div class="small-heading">
+
+                            <span class="material-symbols-outlined">
+                                eco
+                            </span>
+
+                            Artisanal Milling Heritage
+
+                        </div>
+
+
+                        <h2 id="featuredTitle">
+                            Golden Groundnut Oil
+                        </h2>
+
+
+                        <p id="featuredCaption">
+
+                            Slow pressed groundnut oil made from
+                            carefully selected natural ingredients.
+
+                        </p>
+
+
+                        <div class="preview-note">
+
+                            <span class="material-symbols-outlined">
+                                photo_library
+                            </span>
+
+                            <span>
+                                Click any photograph below to
+                                view mill highlights.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= GALLERY GRID ================= -->
+
+        <section class="gallery-section">
+
+            <div class="container">
+
+                <div class="section-heading-row">
+
+                    <div>
+
+                        <span class="section-label">
+                            COLLECTION ARCHIVE
+                        </span>
+
+                        <h2>
+                            Authentic Mill Footprint
+                        </h2>
+
+                    </div>
+
+                    <div class="gallery-count"></div>
+
+                </div>
+
+
+                <!-- Gallery -->
+
+                <div class="gallery-grid">
+
+
+                    <!-- Gallery Card 1 -->
+
+                    <article
+                        class="gallery-card"
+                        data-title="Golden Groundnut Oil"
+                        data-caption="A glimpse of carefully selected groundnuts and traditionally processed oil."
+                        data-tag="Groundnut Oil">
+
+                        <div class="gallery-image">
+
+                            <img
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAlTjnOxgxhSBnDFUi2SXnv9Nj_UEwhYCFBhMz3WQRgmHYtm4OLvDYlyIQ3EeAzyMdb52cZfOq4oXI8fItMs-kAULTM2b6hvQDRVWDpfJObDycyxyLfH0lwiAjuAhu_rrpsHXrVXLfSYhzHKiLaOOyB3Vd6_rtshhAjF4bywS0RLl7EihICoVrDWG8hTenL-vnGET2aXqwPxTi8CgnsUA8QrVYMlJX9j8jKxdIvNtvLHgpxf0IX-w9"
+                                    alt="Groundnut Oil">    
+                                </div>
+
+                        <div class="gallery-content">
+
+                            <h3>
+                                Groundnut Oil
+                            </h3>
+
+                            <p>
+                                Selected groundnuts prepared for
+                                traditional oil extraction.
+                            </p>
+
+                            <span class="view-details">
+                                View Details →
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- Gallery Card 2 -->
+
+                    <article
+                        class="gallery-card"
+                        data-title="Sun-Drying Coconut"
+                        data-caption="Naturally prepared coconut used as an important ingredient for oil production."
+                        data-tag="Coconut">
+
+                        <div class="gallery-image">
+
+                            <img
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAP_pFJ2Qpuqdj-FG_hirwm71bU5YJeC2bWGcpXcxQmjnh-cpbTowH8akWOqzap8NTiSTE4O5UaFzAdmcX4iVkAPsgNHdrLHyBPt0JT5Y0yAvE4bAUdyP6nkGfHCDri_RD3dzjnv7dJpySz7JONHnA-wqHj8vtuFP1TMG0j9YIXaepbl0mYAudPn3x1kEbJlWoHq1hLwOz6Wxf5wL7CIyr0mkF0HIkeet6Di1IUIgFEMOQRgyTZHbkp"
+                                alt="Sun Drying Coconut">
+
+
+                        </div>
+
+                        <div class="gallery-content">
+
+                            <h3>
+                                Sun-Drying Coconut
+                            </h3>
+
+                            <p>
+                                Coconut prepared naturally before
+                                the oil-making process.
+                            </p>
+
+                            <span class="view-details">
+                                View Details →
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- Gallery Card 3 -->
+
+                    <article
+                        class="gallery-card"
+                        data-title="Traditional Wooden Ghani"
+                        data-caption="Traditional wooden equipment used as part of the oil extraction process."
+                        data-tag="Wood Press">
+
+                        <div class="gallery-image">
+
+                            <img
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXwWdXp3_3ntptVFOhnsYE6iG8yH6YaaknilCQBlXshpJmdFf6N6tDpS9RPpRZG9Gd_XxaFegVIyNzrbj7mxkQTzrbI2rq37unuixY_fIp7Yqdb40l1s40eXER_Y0VC08l87XX9-CldA9Uxa4vDZKKrfmsj2QM6YOMcOPxtnokQkVldlarIdyn06ChTQxS_KlbcIULubjM5LvrHCiEhmbSBssaISdw1FVXbCNoAFCmiKj1W89P0BtU"
+                                alt="Traditional Wooden Ghani">
+                        </div>
+
+                        <div class="gallery-content">
+
+                            <h3>
+                                Traditional Wooden Ghani
+                            </h3>
+
+                            <p>
+                                A traditional approach to extracting
+                                natural edible oils.
+                            </p>
+
+                            <span class="view-details">
+                                View Details →
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- Gallery Card 4 -->
+
+                    <article
+                        class="gallery-card"
+                        data-title="Cold Pressed Sesame Oil"
+                        data-caption="Sesame seeds and oil presented in a traditional mill setting."
+                        data-tag="Sesame Oil">
+
+                        <div class="gallery-image">
+
+                            <img
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAb2-9Fzcb04qd3lS0iqyoJbetPjcx3EPZQ8oIfCSNvT9OglGNF7Oc08_hbx9Ug8reXyQlb3MPPu8ixFrP8ijh30aEBbqD7ahNcRexOoiPzlNhUYeDtH4bojeE6BrF_RinMHLpgIrujaPwCOGrr1VGAXOI5SONxspHf-Yn0cwt-Yi-kgDa6YOncWKBE1VAcm812elcHY3kSUpry-SaJk_RkcY8klc0LcqtNaL6bEVcbACpGbyGE2Fs"
+                                alt="Sesame Oil"></div>
+
+                        <div class="gallery-content">
+
+                            <h3>
+                                Cold Pressed Sesame Oil
+                            </h3>
+
+                            <p>
+                                Sesame seeds prepared for natural
+                                edible oil production.
+                            </p>
+
+                            <span class="view-details">
+                                View Details →
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- Gallery Card 5 -->
+
+                    <article
+                        class="gallery-card"
+                        data-title="Whole Mustard Seeds"
+                        data-caption="Selected mustard seeds ready for the traditional oil-making process."
+                        data-tag="Mustard Seeds">
+
+                        <div class="gallery-image">
+
+                            <img
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUmmP5c4y9b5EyvqjTrhCjHD_kORR4hzKjFPl2Yczept3YPe0QFDQNrFozvv06AHPH4f9aMxU4BZXNgVU5wzoi8SBcgFYpWaGbKOUsPc6Wdt3KSf-PnODVwRI1Ghz5G-ozMC2f4mnfM_Bb-_dSoxBfAduCrDTbhis3vt1za6GdE1wHDgx9u77ogkDUbyzmHBiutnrMbBTW17COvlP8c15hyh-aOhJHBiA5lZKrqLJLpSuPjoIh5tly"
+                                alt="Mustard Seeds"></div>
+
+                        <div class="gallery-content">
+
+                            <h3>
+                                Whole Mustard Seeds
+                            </h3>
+
+                            <p>
+                                Carefully selected mustard seeds
+                                before processing.
+                            </p>
+
+                            <span class="view-details">
+                                View Details →
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- Gallery Card 6 -->
+
+                    <article
+                        class="gallery-card"
+                        data-title="Cotton Filtration"
+                        data-caption="A simple natural filtration stage used to clarify the extracted oil."
+                        data-tag="Natural Filtration">
+
+                        <div class="gallery-image">
+
+                            <img
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMxTcMCBzWVfoNs-9rYrvT3IwLGkY6VRZfcxeFGgZv_BlJ40Xpp51JVyBwn-Cno8QfSVride33ud3btNCjwinUgZV70VHLNsIIN2lh2AEIsrTKfBafrNvxPPMaGEAggYE40p6DV2jnTpM5BPIJa1Nx9eahyFpoqEBAm9E8OnSmzqlxhl-5Q7EfeSjtarK3LaFYCavqvsH272H4OYtXJ1r_95g5xVjFy254xBa8zSS1WNXnJwYCYZS1"
+                                alt="Cotton Filtration"></div>
+
+                        <div class="gallery-content">
+
+                            <h3>
+                                Natural Filtration
+                            </h3>
+
+                            <p>
+                                A careful filtration stage before
+                                the finished oil is prepared.
+                            </p>
+
+                            <span class="view-details">
+                                View Details →
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- Gallery Card 7 -->
+
+                    <article
+                        class="gallery-card"
+                        data-title="Sunflower Seeds"
+                        data-caption="Fresh sunflower seeds prepared for edible oil production."
+                        data-tag="Sunflower">
+
+                        <div class="gallery-image">
+
+                            <img
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuClWJ9B7GQt4ALudgulxFzLOIaGn2D2Naptvb-jik2sAUhv-1SSsrhT_CalbDt-Sbssm7meOuCzd73Im4M9SjOHVp_dxXlKYSRUpUCUJBTJkFe7wBcBNpUJRTIOdPEIb3Tz0IJYpQLfhyyfhspHACHuy3DuXxd-AY2PqS19IbHPI0Nj6zPoeGz3i3Jbwt7b9C3nlyPcbewl5B53ydq_0dUdI5wCXSU5RxKex4KK7BQyqqiFb40SV4I7"
+                                alt="Sunflower Seeds">
+
+                        </div>
+
+                        <div class="gallery-content">
+
+                            <h3>
+                                Sunflower Seeds
+                            </h3>
+
+                            <p>
+                                Natural sunflower seeds selected
+                                for oil production.
+                            </p>
+
+                            <span class="view-details">
+                                View Details →
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- Gallery Card 8 -->
+
+                    <article
+                        class="gallery-card"
+                        data-title="Oil Bottling"
+                        data-caption="Finished edible oil carefully prepared for packaging and delivery."
+                        data-tag="Bottling">
+
+                        <div class="gallery-image">
+
+                            <img
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBr6ukb_sF-gz67CtRZ50wjb6R0zvLb5VFL13Z7Hz3729wVGZrZGjE6IvslNMTTaAiBO4UOjAEQ8FH-mY91eeCDwS892i9OxLybCEeq2KaN1EAmqmeLnq-Y1iLIyh5fWrxZQmaXJPvenZ186cZdeWloTsgn-Az7En-40buYOhjaol3ZKV1TT6tUS3zupUwg9on467Nla8j2ipgHJMqAku31vq__Q2Mc_HmzqSLprIruN4I63DahdO3c"
+                                alt="Oil Bottling">
+
+                        </div>
+
+                        <div class="gallery-content">
+
+                            <h3>
+                                Oil Bottling
+                            </h3>
+
+                            <p>
+                                Finished oil prepared for packaging
+                                and delivery.
+                            </p>
+
+                            <span class="view-details">
+                                View Details →
+                            </span>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CTA ================= -->
+
+        <section class="gallery-cta">
+
+            <div class="container">
+
+                <div class="cta-box">
+
+                    <div class="cta-content">
+
+                        <span class="section-label">
+                            VISIT OUR MILL
+                        </span>
+
+                        <h2>
+                            See the Process for Yourself
+                        </h2>
+
+                        <p>
+                            Discover how carefully selected ingredients
+                            become quality edible oils through our
+                            traditional process.
+                        </p>
+
+                    </div>
+
+                    <div class="cta-buttons">
+
+                        <a href="products.html"
+                            class="btn btn-accent">
+
+                            View Products
+
+                        </a>
+
+                        <a href="contact.html"
+                            class="btn btn-outline-light">
+
+                            Contact Us
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="site-footer">
+
+        <div class="container footer-grid">
+
+
+            <!-- Company -->
+
+            <div class="footer-column">
+
+                <div class="footer-logo">
+
+                    <div class="logo-icon">
+                        <img src="C:\Users\Fakruddin\Desktop\MERN_AI\Anudip-Oil-Mill\public\anudip_oil_mill_brand_logo.png" alt="Anudip Oil Mill Logo">
+                    </div>
+
+                    <span>
+                        Anudip Oil Mill
+                    </span>
+
+                </div>
+
+                <p>
+                    Bringing natural goodness and quality
+                    edible oils to your kitchen.
+                </p>
+
+            </div>
+
+
+            <!-- Quick Links -->
+
+            <div class="footer-column">
+
+                <h3>
+                    Quick Links
+                </h3>
+
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="products.html">Products</a>
+                <a href="process.html">Manufacturing Process</a>
+                <a href="quality.html">Quality</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="contact.html">Contact Us</a>
+
+            </div>
+
+
+            <!-- Our Approach -->
+
+            <div class="footer-column">
+
+                <h3>
+                    Our Approach
+                </h3>
+
+                <p>
+                    We focus on carefully selected ingredients,
+                    traditional processing and consistent quality.
+                </p>
+
+            </div>
+
+
+            <!-- Contact -->
+
+            <div class="footer-column">
+
+                <h3>
+                    Contact Information
+                </h3>
+
+                <p>
+                    📍 Bengaluru, Karnataka, India
+                </p>
+
+                <p>
+                    📞 +91 XXXXX XXXXX
+                </p>
+
+                <p>
+                    ✉ info@anudipoilmill.com
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- Footer Bottom -->
+
+        <div class="footer-bottom">
+
+            <div class="container">
+
+                <p>
+                    © 2026 Anudip Oil Mill. All Rights Reserved.
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+
+    <script src="js/common.js"></script>
+    <script src="js/gallery.js"></script>
+
+</body>
+
+</html>
