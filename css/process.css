@@ -1,0 +1,740 @@
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #002E1D;
+    background: #FFF8F5;
+    line-height: 1.6;
+}
+
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+
+/* =========================================
+   HEADER
+========================================= */
+/*
+.header {
+    height: 75px;
+    padding: 0 7%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #FFFFFF;
+    border-bottom: 1px solid #F1DDD0;
+}
+
+*/
+.navbar a {
+    text-decoration: none;
+    color: #665E58;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    transition: 0.3s ease;
+}
+
+
+.navbar a:hover,
+.navbar a.active {
+    color: #002E1D;
+}
+
+
+
+/* =========================================
+   INTRO
+========================================= */
+
+.intro {
+    background: #FFF1E6;
+    padding: 75px 8% 70px;
+}
+
+
+.intro-content {
+    max-width: 1000px;
+}
+
+.intro h1 {
+    color: #002E1D;
+
+    font-size: 42px;
+    line-height: 1.15;
+
+    margin-bottom: 18px;
+}
+
+
+.intro-text {
+    max-width: 760px;
+
+    color: #6B625C;
+
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+
+
+/* =========================================
+   FEATURE BOXES
+========================================= */
+
+.features {
+    display: flex;
+    gap: 18px;
+
+    margin-top: 38px;
+}
+
+
+.feature {
+    min-width: 190px;
+
+    padding: 20px 25px;
+
+    background: #FFFFFF;
+
+    border: 1px solid #F1DDD0;
+    border-radius: 10px;
+
+    transition: 0.3s ease;
+}
+
+
+.feature:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 8px 20px rgba(0, 46, 29, 0.10);
+}
+
+
+.feature-title {
+    color: #002E1D;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    margin-bottom: 4px;
+}
+
+
+.feature-text {
+    color: #8A817A;
+    font-size: 13.5px;
+}
+
+
+
+/* =========================================
+   PROCESS SECTION
+========================================= */
+
+.process-section {
+    background: #FFF8F5;
+
+    padding: 85px 8% 100px;
+}
+
+
+.process-heading {
+    max-width: 850px;
+
+    margin-bottom: 55px;
+}
+
+
+.process-label {
+    color: #B78A55;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 12px;
+}
+
+
+.process-heading h2 {
+    color: #002E1D;
+
+    font-size: 34px;
+    line-height: 1.25;
+}
+
+
+
+/* =========================================
+   TIMELINE
+========================================= */
+
+.timeline {
+    position: relative;
+
+    max-width: 1000px;
+
+    margin: 0 auto;
+}
+
+
+.timeline::before {
+    content: "";
+
+    position: absolute;
+
+    left: 29px;
+    top: 30px;
+    bottom: 30px;
+
+    width: 2px;
+
+    background: #E8C9A8;
+}
+
+
+.step {
+    position: relative;
+
+    display: flex;
+    align-items: flex-start;
+
+    gap: 30px;
+
+    margin-bottom: 35px;
+}
+
+
+.step:last-child {
+    margin-bottom: 0;
+}
+
+
+
+/* NUMBER CIRCLE */
+
+.step-number {
+    width: 60px;
+    height: 60px;
+
+    min-width: 60px;
+
+    border-radius: 50%;
+
+    background: #002E1D;
+    color: #FFFFFF;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    position: relative;
+    z-index: 2;
+
+    transition: 0.3s ease;
+}
+
+
+.step:hover .step-number {
+    transform: scale(1.05);
+}
+
+
+
+/* PROCESS CARD */
+
+.step-card {
+    flex: 1;
+
+    padding: 24px 30px;
+
+    background: #FFFFFF;
+
+    border: 1px solid #F1DDD0;
+    border-radius: 10px;
+
+    transition: 0.3s ease;
+}
+
+
+.step-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 8px 22px rgba(0, 46, 29, 0.10);
+}
+
+
+.step-card h3 {
+    color: #002E1D;
+
+    font-size: 19px;
+
+    margin-bottom: 8px;
+}
+
+
+.step-card p {
+    color: #6B625C;
+
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+
+
+/* =========================================
+   GALLERY SECTION
+========================================= */
+
+.gallery-section {
+    background: #FFF1E6;
+
+    padding: 85px 6% 100px;
+}
+
+
+.gallery-heading {
+    text-align: center;
+
+    max-width: 750px;
+
+    margin: 0 auto 50px;
+}
+
+
+.gallery-label {
+    color: #B78A55;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 12px;
+}
+
+
+.gallery-heading h2 {
+    color: #002E1D;
+
+    font-size: 34px;
+
+    margin-bottom: 14px;
+}
+
+
+.gallery-heading p {
+    color: #6B625C;
+
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+
+
+/* =========================================
+   GALLERY GRID
+========================================= */
+
+/*
+   IMPORTANT:
+   FOUR CARDS WILL APPEAR IN ONE ROW
+   ON A LAPTOP / DESKTOP.
+*/
+
+.gallery-grid {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    gap: 20px;
+}
+
+
+.gallery-card {
+    width: 100%;
+
+    background: #FFFFFF;
+
+    border: 1px solid #F1DDD0;
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    transition: 0.3s ease;
+}
+
+
+.gallery-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 10px 25px rgba(0, 46, 29, 0.12);
+}
+
+
+
+/* =========================================
+   GALLERY IMAGE
+========================================= */
+
+.gallery-card img {
+    width: 100%;
+
+    height: 190px;
+
+    object-fit: cover;
+
+    transition: 0.4s ease;
+}
+
+
+.gallery-card:hover img {
+    transform: scale(1.04);
+}
+
+
+
+/* =========================================
+   GALLERY TEXT
+========================================= */
+
+.gallery-info {
+    padding: 15px 18px 18px;
+}
+
+
+.stage {
+    color: #B78A55;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    margin-bottom: 5px;
+}
+
+
+.gallery-info h3 {
+    color: #002E1D;
+
+    font-size: 17px;
+    font-weight: 700;
+}
+
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer {
+    background: #FFF1E6;
+
+    border-top: 1px solid #F1DDD0;
+
+    padding: 65px 8% 25px;
+}
+
+
+.footer-content {
+    display: grid;
+
+    grid-template-columns:
+        1.5fr
+        1fr
+        1.5fr
+        1.2fr;
+
+    gap: 50px;
+
+    padding-bottom: 45px;
+}
+
+
+.footer-column h3 {
+    color: #002E1D;
+
+    font-size: 16px;
+
+    margin-bottom: 18px;
+}
+
+
+.footer-column p {
+    color: #6B625C;
+
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+
+.footer-logo {
+    color: #002E1D;
+
+    font-size: 21px;
+    font-weight: 700;
+
+    margin-bottom: 15px;
+}
+
+
+.footer-column a {
+    display: block;
+
+    text-decoration: none;
+
+    color: #6B625C;
+
+    font-size: 13px;
+
+    margin-bottom: 8px;
+
+    transition: 0.3s ease;
+}
+
+
+.footer-column a:hover {
+    color: #002E1D;
+}
+
+
+
+/* =========================================
+   FOOTER BOTTOM
+========================================= */
+
+.footer-bottom {
+    border-top: 1px solid #E8C9A8;
+
+    padding-top: 22px;
+
+    text-align: center;
+
+    color: #8A817A;
+
+    font-size: 11px;
+}
+
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .header {
+        padding: 0 5%;
+    }
+
+
+    .navbar {
+        gap: 15px;
+    }
+
+
+    .navbar a {
+        font-size: 11px;
+    }
+
+
+    .intro {
+        padding: 60px 6%;
+    }
+
+
+    .intro h1 {
+        font-size: 36px;
+    }
+
+
+    .process-section {
+        padding: 70px 6%;
+    }
+
+
+    .gallery-section {
+        padding: 70px 5%;
+    }
+
+
+    /*
+       TWO CARDS PER ROW
+       ON TABLET
+    */
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 35px;
+    }
+
+}
+
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .header {
+        height: auto;
+
+        padding: 20px 5%;
+
+        flex-direction: column;
+
+        gap: 18px;
+    }
+
+
+    .navbar {
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 12px 18px;
+    }
+
+
+    .intro {
+        padding: 50px 6%;
+    }
+
+
+    .intro h1 {
+        font-size: 30px;
+    }
+
+
+    .intro-text {
+        font-size: 14px;
+    }
+
+
+    .features {
+        flex-direction: column;
+    }
+
+
+    .feature {
+        width: 100%;
+    }
+
+
+    .process-section {
+        padding: 60px 5%;
+    }
+
+
+    .process-heading h2 {
+        font-size: 28px;
+    }
+
+
+    .timeline::before {
+        left: 24px;
+    }
+
+
+    .step {
+        gap: 20px;
+    }
+
+
+    .step-number {
+        width: 50px;
+        height: 50px;
+
+        min-width: 50px;
+
+        font-size: 13px;
+    }
+
+
+    .step-card {
+        padding: 20px;
+    }
+
+
+    .step-card h3 {
+        font-size: 16px;
+    }
+
+
+    .step-card p {
+        font-size: 13px;
+    }
+
+
+    .gallery-section {
+        padding: 60px 5%;
+    }
+
+
+    .gallery-heading h2 {
+        font-size: 28px;
+    }
+
+
+    /*
+       ONE CARD PER ROW
+       ONLY ON MOBILE
+    */
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .gallery-card img {
+        height: 220px;
+    }
+
+
+    .footer {
+        padding: 55px 7% 20px;
+    }
+
+
+    .footer-content {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+    }
+
+}
