@@ -1,0 +1,457 @@
+/* ==========================================================================
+   ANUDIP OIL MILL - HOME PAGE STYLES (home.css)
+   Botanical Organic Palette & Responsive Design System
+   ========================================================================== */
+
+/* ---------- CSS VARIABLES & DESIGN TOKENS ---------- */
+:root {
+  /* Brand Color Palette */
+  --color-primary: #012d1d;
+  --color-primary-container: #1b4332;
+  --color-primary-fixed: #c1ecd4;
+  --color-primary-fixed-dim: #a5d0b9;
+  --color-on-primary: #ffffff;
+  --color-on-primary-container: #86af99;
+  --color-on-primary-fixed: #002114;
+  --color-on-primary-fixed-variant: #274e3d;
+
+  --color-secondary: #2c694e;
+  --color-secondary-container: #aeeecb;
+  --color-secondary-fixed: #b1f0ce;
+  --color-secondary-fixed-dim: #95d4b3;
+  --color-on-secondary: #ffffff;
+  --color-on-secondary-container: #316e52;
+  --color-on-secondary-fixed: #002114;
+  --color-on-secondary-fixed-variant: #0e5138;
+
+  --color-tertiary: #322400;
+  --color-tertiary-container: #4c3900;
+  --color-tertiary-fixed: #ffdf96;
+  --color-tertiary-fixed-dim: #e7c268;
+  --color-on-tertiary: #ffffff;
+  --color-on-tertiary-container: #c4a24c;
+  --color-on-tertiary-fixed: #251a00;
+  --color-on-tertiary-fixed-variant: #5a4400;
+
+  /* Surfaces & Backgrounds */
+  --color-background: #fff8f4;
+  --color-surface: #fff8f4;
+  --color-surface-bright: #fff8f4;
+  --color-surface-dim: #ebd7c4;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #fff1e6;
+  --color-surface-container: #ffead8;
+  --color-surface-container-high: #fae5d1;
+  --color-surface-container-highest: #f4dfcc;
+
+  /* Text & Outlines */
+  --color-on-surface: #241a0e;
+  --color-on-surface-variant: #414844;
+  --color-on-background: #241a0e;
+  --color-outline: #717973;
+  --color-outline-variant: #c1c8c2;
+  --color-surface-tint: #3f6653;
+
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(43, 32, 20, 0.05);
+  --shadow-md: 0 4px 16px rgba(43, 32, 20, 0.08);
+  --shadow-lg: 0 10px 30px rgba(43, 32, 20, 0.12);
+  --shadow-header: 0 4px 20px rgba(43, 32, 20, 0.04);
+  --shadow-dock: 0 -4px 20px rgba(43, 32, 20, 0.06);
+
+  /* Border Radii */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
+  --radius-full: 9999px;
+
+  /* Transition Speeds */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-smooth: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ---------- BASE RESET & GENERAL STYLES ---------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-background);
+  color: var(--color-on-surface);
+  font-family: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Safe Area Insets for Mobile Devices */
+.pt-safe {
+  padding-top: env(safe-area-inset-top, 0px);
+}
+
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+/* Hide scrollbar for a seamless app-like look */
+::-webkit-scrollbar {
+  display: none;
+}
+* {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* ---------- SITE HEADER ---------- */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  background-color: rgba(255, 248, 244, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(193, 200, 194, 0.3);
+  box-shadow: var(--shadow-header);
+  transition: background-color var(--transition-normal);
+}
+
+.header-container {
+  height: 5rem;
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.brand-logo-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.brand-logo-img {
+  height: 2.75rem;
+  width: 2.75rem;
+  object-fit: cover;
+  border-radius: var(--radius-full);
+  border: 2px solid var(--color-primary-fixed);
+  flex-shrink: 0;
+}
+
+.brand-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+.brand-tagline {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-secondary);
+  line-height: 1;
+}
+
+/* Desktop Navigation Links */
+.desktop-nav {
+  display: none;
+  align-items: center;
+  gap: 1.75rem;
+}
+
+@media (min-width: 1024px) {
+  .desktop-nav {
+    display: flex;
+  }
+}
+
+.nav-link {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--color-on-surface-variant);
+  transition: color var(--transition-fast), transform var(--transition-fast);
+  position: relative;
+  padding: 0.25rem 0;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--color-primary);
+}
+
+.nav-link.active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-secondary);
+  border-radius: var(--radius-full);
+}
+
+/* Header Action Buttons */
+.cart-pill-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.625rem 1.125rem;
+  background-color: var(--color-surface-container-low);
+  color: var(--color-primary);
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  font-size: 0.875rem;
+  transition: all var(--transition-fast);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(193, 200, 194, 0.4);
+}
+
+.cart-pill-btn:hover {
+  background-color: var(--color-surface-container);
+  transform: translateY(-1px);
+}
+
+/* Mobile Drawer */
+#mobileDrawer {
+  transition: max-height 0.35s ease-in-out, opacity 0.3s ease;
+}
+
+/* ---------- HERO SECTION ---------- */
+.hero-badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.375rem 0.875rem;
+  border-radius: var(--radius-full);
+  background-color: var(--color-secondary-container);
+  color: var(--color-on-secondary-container);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.hero-cta-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  height: 3rem;
+  padding: 0 1.75rem;
+  border-radius: var(--radius-full);
+  background-color: var(--color-primary);
+  color: var(--color-on-primary);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-normal);
+}
+
+.hero-cta-primary:hover {
+  background-color: var(--color-secondary);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.hero-cta-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  height: 3rem;
+  padding: 0 1.75rem;
+  border-radius: var(--radius-full);
+  background-color: var(--color-surface-container);
+  color: var(--color-primary);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  transition: all var(--transition-normal);
+}
+
+.hero-cta-secondary:hover {
+  background-color: var(--color-surface-container-high);
+  transform: translateY(-2px);
+}
+
+/* ---------- PROMISE / WHY CHOOSE US CARDS ---------- */
+.promise-card {
+  background-color: var(--color-surface-container-lowest);
+  border-radius: var(--radius-2xl);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  border: 1px solid rgba(226, 216, 206, 0.5);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.promise-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.promise-icon-wrap {
+  width: 3rem;
+  height: 3rem;
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ---------- FEATURED PRODUCTS ---------- */
+.product-card {
+  background-color: var(--color-surface-container-lowest);
+  border-radius: var(--radius-2xl);
+  padding: 1rem;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid rgba(226, 216, 206, 0.4);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.product-image-container {
+  width: 100%;
+  height: 12.5rem;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  background-color: var(--color-surface-container-low);
+}
+
+.product-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.product-card:hover .product-image-container img {
+  transform: scale(1.05);
+}
+
+.product-action-btn {
+  width: 100%;
+  height: 2.75rem;
+  border-radius: var(--radius-full);
+  background-color: var(--color-primary);
+  color: var(--color-on-primary);
+  font-weight: 600;
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: background-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.product-action-btn:hover {
+  background-color: var(--color-secondary);
+  transform: translateY(-1px);
+}
+
+/* ---------- SEED TO BOTTLE STEP CARDS ---------- */
+.step-card {
+  background-color: var(--color-surface-container-lowest);
+  border-radius: var(--radius-2xl);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  border: 1px solid rgba(226, 216, 206, 0.4);
+  position: relative;
+  transition: transform var(--transition-normal);
+}
+
+.step-card:hover {
+  transform: translateY(-3px);
+}
+
+.step-number {
+  width: 2rem;
+  height: 2rem;
+  border-radius: var(--radius-full);
+  background-color: var(--color-primary);
+  color: var(--color-on-primary);
+  font-weight: 700;
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ---------- CALL TO ACTION BANNER ---------- */
+.cta-banner-box {
+  border-radius: var(--radius-2xl);
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-container) 100%);
+  color: var(--color-on-primary);
+  padding: 3rem 1.5rem;
+  text-align: center;
+  box-shadow: var(--shadow-md);
+}
+
+/* ---------- BOTTOM MOBILE DOCK NAVIGATION ---------- */
+.bottom-dock {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 40;
+  background-color: rgba(255, 248, 244, 0.95);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-top: 1px solid rgba(193, 200, 194, 0.4);
+  box-shadow: var(--shadow-dock);
+}
+
+@media (min-width: 1024px) {
+  .bottom-dock {
+    display: none;
+  }
+}
+
+.dock-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  padding: 0.5rem 0.75rem;
+  color: var(--color-on-surface-variant);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  transition: color var(--transition-fast);
+}
+
+.dock-item.active {
+  color: var(--color-secondary);
+  font-weight: 700;
+}
