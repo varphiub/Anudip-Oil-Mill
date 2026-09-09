@@ -1,0 +1,296 @@
+/* =========================================
+   ANUDIP OIL MILL - COMMON HEADER
+   ========================================= */
+
+.site-header {
+    width: 100%;
+    height: 76px;
+    background: #fff8f4;
+    border-bottom: 1px solid #eadfd6;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 1000;
+}
+
+.header-container {
+    width: 100%;
+    max-width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 24px;
+
+    display: flex;
+    align-items: center;
+}
+
+/* =========================================
+   LOGO
+   ========================================= */
+
+.header-logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    flex-shrink: 0;
+}
+
+.header-logo img {
+    width: 145px;
+    height: 58px;
+    object-fit: contain;
+    object-position: left center;
+    display: block;
+}
+
+/* =========================================
+   DESKTOP NAVIGATION
+   ========================================= */
+
+.header-nav {
+    display: flex;
+    align-items: center;
+    gap: 27px;
+    margin-left: auto;
+    margin-right: 25px;
+}
+
+.header-nav a {
+    color: #241a0e;
+    text-decoration: none;
+
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    transition: color 0.2s ease;
+}
+
+.header-nav a:hover {
+    color: #2c694e;
+}
+
+/* =========================================
+   RIGHT SIDE
+   ========================================= */
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+/* =========================================
+   CART
+   ========================================= */
+
+.cart-button {
+    height: 42px;
+    padding: 0 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+
+    background: #012d1d;
+    color: #ffffff;
+
+    border-radius: 24px;
+
+    text-decoration: none;
+
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+
+    transition: all 0.2s ease;
+}
+
+.cart-button:hover {
+    background: #2c694e;
+    transform: translateY(-1px);
+}
+
+.cart-button .material-symbols-outlined {
+    font-size: 21px;
+}
+
+/* =========================================
+   ACCOUNT
+   ========================================= */
+
+.account-button {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #012d1d;
+    color: #ffffff;
+
+    border-radius: 50%;
+
+    text-decoration: none;
+
+    transition: all 0.2s ease;
+}
+
+.account-button:hover {
+    background: #2c694e;
+    transform: translateY(-1px);
+}
+
+.account-button .material-symbols-outlined {
+    font-size: 21px;
+}
+
+/* =========================================
+   MOBILE MENU BUTTON
+   ========================================= */
+
+.menu-toggle {
+    display: none;
+
+    width: 42px;
+    height: 42px;
+
+    align-items: center;
+    justify-content: center;
+
+    background: transparent;
+    color: #012d1d;
+
+    border: none;
+    cursor: pointer;
+}
+
+.menu-toggle .material-symbols-outlined {
+    font-size: 27px;
+}
+
+/* =========================================
+   MOBILE DRAWER
+   IMPORTANT: HIDDEN ON DESKTOP
+   ========================================= */
+
+.mobile-drawer {
+    display: none;
+}
+
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 1100px) {
+
+    .header-nav {
+        gap: 18px;
+        margin-right: 15px;
+    }
+
+    .header-nav a {
+        font-size: 13px;
+    }
+
+    .header-logo img {
+        width: 130px;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 900px) {
+
+    .site-header {
+        height: 68px;
+    }
+
+    .header-container {
+        padding: 0 18px;
+    }
+
+    .header-logo img {
+        width: 130px;
+        height: 52px;
+    }
+
+    /* Hide desktop navigation */
+    .header-nav {
+        display: none;
+    }
+
+    /* Show mobile menu button */
+    .menu-toggle {
+        display: flex;
+    }
+
+    .header-actions {
+        margin-left: auto;
+        gap: 7px;
+    }
+
+    .cart-button {
+        height: 40px;
+        padding: 0 13px;
+    }
+
+    .account-button {
+        width: 40px;
+        height: 40px;
+    }
+
+    /* Mobile drawer */
+    .mobile-drawer {
+        position: absolute;
+        top: 68px;
+        left: 0;
+        width: 100%;
+
+        background: #fff8f4;
+
+        border-top: 1px solid #eadfd6;
+        border-bottom: 1px solid #eadfd6;
+
+        padding: 15px 20px;
+
+        flex-direction: column;
+        gap: 5px;
+
+        box-shadow: 0 8px 20px rgba(36, 26, 14, 0.08);
+    }
+
+    .mobile-drawer a {
+        display: block;
+
+        padding: 13px 10px;
+
+        color: #241a0e;
+        text-decoration: none;
+
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-size: 15px;
+        font-weight: 600;
+
+        border-radius: 8px;
+    }
+
+    .mobile-drawer a:hover {
+        background: #ffead8;
+        color: #2c694e;
+    }
+
+    /* JS can add this class when menu opens */
+    .mobile-drawer.active {
+        display: flex;
+    }
+}

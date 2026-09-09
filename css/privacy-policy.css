@@ -1,0 +1,272 @@
+/* =========================================
+   ANUDIP OIL MILL - PRIVACY POLICY
+========================================= */
+
+.privacy-page {
+    background: #fffaf6;
+    color: #241a0e;
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.privacy-hero {
+    background: #fff0e4;
+    border-bottom: 1px solid #eadfd6;
+    padding: 75px 20px 70px;
+}
+
+.privacy-hero-content {
+    width: calc(100% - 80px);
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.privacy-label {
+    display: inline-block;
+
+    margin-bottom: 15px;
+
+    color: #0d452f;
+
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.privacy-hero h1 {
+    margin: 0 0 18px;
+
+    color: #241a0e;
+
+    font-size: 44px;
+    line-height: 1.15;
+    font-weight: 700;
+}
+
+.privacy-hero p {
+    max-width: 700px;
+
+    margin: 0 auto 20px;
+
+    color: #625b54;
+
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.updated-date {
+    color: #756d66;
+
+    font-size: 12px;
+    font-weight: 500;
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.privacy-content {
+    padding: 70px 20px;
+}
+
+.privacy-container {
+    width: calc(100% - 80px);
+    max-width: 900px;
+
+    margin: 0 auto;
+}
+
+
+/* =========================================
+   POLICY SECTIONS
+========================================= */
+
+.policy-section {
+    padding-bottom: 38px;
+    margin-bottom: 38px;
+
+    border-bottom: 1px solid #eadfd6;
+}
+
+.policy-section:last-child {
+    margin-bottom: 0;
+    border-bottom: none;
+}
+
+.policy-section h2 {
+    margin: 0 0 16px;
+
+    color: #241a0e;
+
+    font-size: 22px;
+    line-height: 1.4;
+    font-weight: 700;
+}
+
+.policy-section p {
+    margin: 0 0 14px;
+
+    color: #625b54;
+
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.policy-section p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================================
+   LIST
+========================================= */
+
+.policy-section ul {
+    margin: 10px 0 18px;
+    padding-left: 22px;
+}
+
+.policy-section li {
+    margin-bottom: 9px;
+
+    color: #625b54;
+
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   CONTACT
+========================================= */
+
+.contact-policy {
+    padding: 35px;
+
+    background: #fff0e4;
+
+    border: 1px solid #eadfd6;
+    border-radius: 12px;
+}
+
+.contact-link {
+    display: inline-flex;
+
+    align-items: center;
+    gap: 7px;
+
+    margin-top: 10px;
+    padding: 12px 18px;
+
+    background: #0d452f;
+    color: #ffffff;
+
+    border-radius: 24px;
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    transition: all 0.2s ease;
+}
+
+.contact-link:hover {
+    background: #2c694e;
+    transform: translateY(-1px);
+}
+
+.contact-link .material-symbols-outlined {
+    font-size: 17px;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 800px) {
+
+    .privacy-hero {
+        padding: 60px 20px;
+    }
+
+    .privacy-hero-content {
+        width: calc(100% - 40px);
+    }
+
+    .privacy-hero h1 {
+        font-size: 38px;
+    }
+
+    .privacy-content {
+        padding: 55px 20px;
+    }
+
+    .privacy-container {
+        width: calc(100% - 40px);
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .privacy-hero {
+        padding: 48px 15px;
+    }
+
+    .privacy-hero-content {
+        width: 100%;
+    }
+
+    .privacy-label {
+        font-size: 11px;
+    }
+
+    .privacy-hero h1 {
+        font-size: 32px;
+    }
+
+    .privacy-hero p {
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+    .privacy-content {
+        padding: 45px 15px;
+    }
+
+    .privacy-container {
+        width: 100%;
+    }
+
+    .policy-section {
+        padding-bottom: 30px;
+        margin-bottom: 30px;
+    }
+
+    .policy-section h2 {
+        font-size: 19px;
+    }
+
+    .policy-section p,
+    .policy-section li {
+        font-size: 13px;
+        line-height: 1.8;
+    }
+
+    .contact-policy {
+        padding: 25px 20px;
+    }
+}

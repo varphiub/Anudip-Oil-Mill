@@ -1,0 +1,331 @@
+/* =================================
+   ANUDIP OIL MILL - COMMON FOOTER
+================================= */
+
+.site-footer {
+    width: 100%;
+    background: #fff0e4;
+    color: #241a0e;
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+
+/* =================================
+   MAIN FOOTER
+================================= */
+
+.footer-container {
+    width: calc(100% - 80px);
+    max-width: 1200px;
+
+    margin: 0 auto;
+    padding: 65px 0 55px;
+
+    display: grid;
+    grid-template-columns: 1.3fr 0.8fr 1.3fr 1fr;
+
+    column-gap: 55px;
+}
+
+
+/* =================================
+   COMPANY / BRAND
+================================= */
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    margin-bottom: 20px;
+}
+
+/* =================================
+   FOOTER LOGO
+================================= */
+
+.footer-logo {
+    width:75px ;
+    height: 75px ;
+    max-width: 75px ;
+    object-fit: contain;
+    display: block;
+}
+
+.footer-brand span {
+    display: none;
+}
+
+.footer-description {
+    max-width: 310px;
+
+    margin: 0;
+
+    color: #625b54;
+
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+
+/* =================================
+   SOCIAL ICONS
+================================= */
+
+.footer-social {
+    display: flex;
+    gap: 10px;
+
+    margin-top: 24px;
+}
+
+.footer-social a {
+    width: 36px;
+    height: 36px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #d9c9bd;
+    border-radius: 50%;
+
+    color: #0d452f;
+
+    text-decoration: none;
+
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+
+    transition: all 0.2s ease;
+}
+
+.footer-social a:hover {
+    background: #0d452f;
+    color: #ffffff;
+    border-color: #0d452f;
+
+    transform: translateY(-2px);
+}
+
+
+/* =================================
+   COLUMN HEADINGS
+================================= */
+
+.footer-column h3 {
+    margin: 0 0 22px;
+
+    color: #241a0e;
+
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+
+/* =================================
+   QUICK LINKS
+================================= */
+
+.footer-column > a {
+    display: block;
+
+    margin-bottom: 13px;
+
+    color: #625b54;
+
+    text-decoration: none;
+
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.footer-column > a:hover {
+    color: #0d452f;
+    transform: translateX(3px);
+}
+
+
+/* =================================
+   PURE EXTRACTION
+================================= */
+
+.extraction-column p {
+    max-width: 290px;
+
+    margin: 0;
+
+    color: #625b54;
+
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+
+/* =================================
+   CONTACT
+================================= */
+
+.contact-row {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 12px;
+
+    margin-bottom: 18px;
+}
+
+.contact-icon {
+    width: 20px;
+
+    flex-shrink: 0;
+
+    color: #0d452f;
+
+    font-size: 15px;
+}
+
+.contact-row p {
+    margin: 0;
+
+    color: #625b54;
+
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+
+/* =================================
+   FOOTER BOTTOM
+================================= */
+
+.footer-bottom {
+    width: calc(100% - 80px);
+    max-width: 1200px;
+
+    margin: 0 auto;
+    padding: 20px 0;
+
+    border-top: 1px solid #dfd0c5;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-bottom p {
+    margin: 0;
+
+    color: #756d66;
+
+    font-size: 12px;
+}
+
+.footer-legal {
+    display: flex;
+    gap: 25px;
+}
+
+.footer-legal a {
+    color: #756d66;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    transition: color 0.2s ease;
+}
+
+.footer-legal a:hover {
+    color: #0d452f;
+}
+
+
+/* =================================
+   TABLET
+================================= */
+
+@media (max-width: 1000px) {
+
+    .footer-container {
+        width: calc(100% - 60px);
+
+        grid-template-columns: 1fr 1fr;
+
+        row-gap: 45px;
+        column-gap: 40px;
+    }
+
+    .footer-bottom {
+        width: calc(100% - 60px);
+    }
+
+    .footer-logo {
+        width: 70px;
+        max-width: 70px;
+    }
+}
+
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 600px) {
+
+    .footer-container {
+        width: calc(100% - 40px);
+
+        grid-template-columns: 1fr;
+
+        row-gap: 35px;
+
+        padding: 45px 0;
+    }
+
+    .footer-logo {
+        width: 65px;
+        max-width: 65px;
+    }
+
+    .footer-logo {
+    width: 50px !important;
+    height: 50px !important;
+
+    max-width: 50px !important;
+    max-height: 50px !important;
+}
+
+    .footer-column h3 {
+        font-size: 16px;
+    }
+
+    .footer-column > a,
+    .extraction-column p,
+    .contact-row p {
+        font-size: 13px;
+    }
+
+    .footer-bottom {
+        width: calc(100% - 40px);
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+
+    .footer-legal {
+        gap: 15px;
+
+        flex-wrap: wrap;
+    }
+}
