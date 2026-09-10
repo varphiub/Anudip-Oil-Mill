@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact Us — Anudip Oil Mill</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="contact.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div style="display:flex;align-items:center;gap:12px">
+        <img class="site-logo" src="assets/logo.jpg" alt="Anudip Oil Mill logo">
+        <div class="brand">Anudip Oil Mill</div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container contact-page">
+    <section class="page-hero">
+      <h1>Get In Touch</h1>
+      <p class="lead">Have questions about our pure oils, wholesale inquiries, or want to schedule a mill visit? We would love to hear from you.</p>
+    </section>
+
+    <section class="contact-channels grid-3">
+      <article class="card small">
+        <div class="icon"><span class="circle">📍</span></div>
+        <h3 class="muted">MILL FACILITY</h3>
+        <h4>Our Heritage Mill</h4>
+        <p class="muted small">Anudip Oil Mill, Industrial Area, Bengaluru, Karnataka, India</p>
+        <p class="note">Open for wholesale pickups</p>
+      </article>
+
+      <article class="card small">
+        <div class="icon"><span class="circle">📞</span></div>
+        <h3 class="muted">DIRECT INQUIRIES</h3>
+        <h4>Phone <span class="amp" aria-hidden="true"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true"><text x="50%" y="60%" dominant-baseline="middle" text-anchor="middle" font-family="Playfair Display, serif" font-weight="700" font-size="72">&amp;</text></svg></span><span class="sr-only">and</span> WhatsApp</h4>
+        <p class="muted small">+91 98765 43210<br>Mon - Sat, 9:00 AM - 6:00 PM IST</p>
+        <p class="note">Prompt phone support</p>
+      </article>
+
+      <article class="card small">
+        <div class="icon"><span class="circle">✉️</span></div>
+        <h3 class="muted">ELECTRONIC MAIL</h3>
+        <h4>Written Requests</h4>
+        <p class="muted small"><a class="email" href="mailto:info@anudipoilmill.com">info@anudipoilmill.com</a></p>
+        <p class="note">Replies within 24 hours</p>
+      </article>
+    </section>
+
+    <section class="two-col">
+      <div class="left">
+        <div class="card form-card">
+          <h3>Send Us a Message</h3>
+          <p class="muted">Whether you need pure wood-pressed sesame oil in retail bottles or bulk groundnut oil drums, let us know below.</p>
+
+          <div id="successBanner" class="success-banner" role="status" aria-live="polite" hidden>
+            <div class="success-icon">✓</div>
+            <div class="success-content"><strong>Thank you! Your message has been received.</strong>
+            <div class="muted small">Our mill supervisor or sales team will review your message and reply via email shortly.</div></div>
+          </div>
+
+          <form id="contactForm" novalidate>
+            <div class="form-row two-up">
+              <div class="field">
+                <label for="fullName">Full Name *</label>
+                <input id="fullName" name="fullName" type="text" placeholder="e.g. Ramesh Kumar" required>
+                <div class="error-message" data-for="fullName">Please enter your full name.</div>
+              </div>
+
+              <div class="field">
+                <label for="email">Email Address *</label>
+                <input id="email" name="email" type="email" placeholder="ramesh@example.com" required>
+                <div class="error-message" data-for="email">Please provide a valid email address.</div>
+              </div>
+            </div>
+
+            <div class="form-row two-up">
+              <div class="field">
+                <label for="phone">Phone Number (Optional)</label>
+                <input id="phone" name="phone" type="tel" placeholder="+91 98765 00000">
+                <div class="error-message" data-for="phone"></div>
+              </div>
+
+              <div class="field">
+                <label for="subject">Subject *</label>
+                <!-- hidden native select for form submission and validation; custom UI below mirrors it -->
+                <select id="subject" name="subject" required style="display:none">
+                  <option value="">Select Inquiry Reason</option>
+                  <option value="bulk">Bulk Commercial Order (Tins / Drums)</option>
+                  <option value="general">General Product Inquiry</option>
+                  <option value="visit">Schedule a Mill Visit &amp; Demonstration</option>
+                  <option value="batch">Batch Quality &amp; Lab Analysis Certificate</option>
+                </select>
+
+                <div class="custom-select" data-for="subject" tabindex="0" role="combobox" aria-haspopup="listbox" aria-expanded="false">
+                  <button type="button" class="custom-select-trigger" aria-labelledby="subject">Select Inquiry Reason <span class="arrow">▾</span></button>
+                  <ul class="custom-select-list" role="listbox" aria-hidden="true">
+                    <li role="option" data-value="" class="header">Select Inquiry Reason</li>
+                    <li role="option" data-value="bulk">Bulk Commercial Order (Tins / Drums)</li>
+                    <li role="option" data-value="general">General Product Inquiry</li>
+                    <li role="option" data-value="visit">Schedule a Mill Visit &amp; Demonstration</li>
+                    <li role="option" data-value="batch">Batch Quality &amp; Lab Analysis Certificate</li>
+                  </ul>
+                </div>
+                <div class="error-message" data-for="subject">Please select a subject for your inquiry.</div>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <label for="message">Your Message *</label>
+              <textarea id="message" name="message" rows="6" placeholder="Mention oil variety (Groundnut, Sesame, Mustard, Coconut), quantity requirements, or visiting date..." required></textarea>
+              <div class="error-message" data-for="message">Please include a message detailing your request.</div>
+            </div>
+
+            <div class="info-box">
+              <div class="lock">🔒</div>
+              <div class="info-text">Your contact information is strictly used for oil delivery and order inquiries.</div>
+              <div class="badge">100% UNREFINED</div>
+            </div>
+
+            <div class="form-footer">
+              <button type="submit" class="btn-primary"><span class="btn-icon">▶</span> Send Message</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <aside class="right">
+        <div class="card map-card">
+          <div class="map-header"><span class="dot">📍</span> Mill Location <button class="link small">Live Coordinates</button></div>
+          <div class="map-embed">
+            <iframe src="https://www.google.com/maps?q=Bengaluru&amp;output=embed" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+          </div>
+          <p class="muted small">Convenient truck access & visitor parking available directly inside the mill gate.</p>
+        </div>
+
+        <div class="card small visiting">
+          <h4>Visiting Hours <span class="amp" aria-hidden="true"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true"><text x="50%" y="60%" dominant-baseline="middle" text-anchor="middle" font-family="Playfair Display, serif" font-weight="700" font-size="72">&amp;</text></svg></span><span class="sr-only">and</span> Mill Tour</h4>
+          <p class="muted small">Open to Visitors <span class="amp" aria-hidden="true"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true"><text x="50%" y="60%" dominant-baseline="middle" text-anchor="middle" font-family="Playfair Display, serif" font-weight="700" font-size="72">&amp;</text></svg></span><span class="sr-only">and</span> Wholesale Buyers. For guided group tours or bulk commercial demos, please reach out via the contact form.</p>
+          <ul class="hours">
+            <li><strong>Monday - Saturday</strong> <span>9:00 AM - 6:00 PM</span></li>
+            <li><strong>Sunday</strong> <span>Closed for Maintenance</span></li>
+          </ul>
+        </div>
+
+        <div class="card small callnow">
+          <div class="callrow"><div>Need Immediate Bulk Assistance?</div><a class="call-btn" href="tel:+919876543210">Call Now</a></div>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="site-footer big-footer">
+    <div class="container footer-grid">
+      <div class="col brand-col">
+        <div class="logo">Anudip Oil Mill</div>
+        <p class="muted">Dedicated to bringing 100% natural, traditionally extracted cold-pressed and pure edible oils straight from farm seeds to your kitchen.</p>
+      </div>
+      <div class="col links-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li>Home</li>
+          <li>About Us</li>
+          <li>Products</li>
+          <li>Manufacturing Process</li>
+          <li>Quality Standards</li>
+          <li>Gallery</li>
+          <li>Contact Us</li>
+        </ul>
+      </div>
+      <div class="col extract-col">
+        <h4>Pure Extraction</h4>
+        <p class="muted">Our seeds undergo authentic wood-pressed (Mara Chekku) churning below 45°C, preserving active vitamins, vital nutrients, and genuine seed aroma without chemical refining or heat damage.</p>
+      </div>
+      <div class="col contact-col">
+        <h4>Contact Information</h4>
+        <p class="muted">Anudip Oil Mill, Bengaluru, Karnataka, India<br>+91 98765 43210<br><a class="email" href="mailto:info@anudipoilmill.com">info@anudipoilmill.com</a></p>
+      </div>
+    </div>
+    <div class="container small-footer">© 2025 Anudip Oil Mill. All Rights Reserved. <span class="float-right">Privacy Policy • Terms of Service • Lab Reports</span></div>
+  </footer>
+
+  <script src="contact.js"></script>
+</body>
+</html>
