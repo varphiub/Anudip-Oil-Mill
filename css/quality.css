@@ -1,0 +1,582 @@
+/* =========================================
+   ANUDIP OIL MILL - QUALITY STANDARDS
+   ========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    color: #241a0e;
+    background-color: #fff8f4;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* =========================================
+   HERO BANNER
+   ========================================= */
+.quality-hero {
+    background: linear-gradient(180deg, #fff1e6 0%, #fff8f4 100%);
+    padding: 45px 0 35px;
+    position: relative;
+    overflow: hidden;
+}
+
+.quality-hero .hero-grid {
+    display: grid;
+    grid-template-columns: 1.3fr 0.7fr;
+    gap: 32px;
+    align-items: center;
+}
+
+.hero-text .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #c1ecd4;
+    color: #2c694e;
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    margin-bottom: 14px;
+}
+
+.hero-text h1 {
+    color: #012d1d;
+    font-size: 42px;
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    margin-bottom: 14px;
+}
+
+.hero-text p {
+    color: #414844;
+    font-size: 17px;
+    line-height: 1.7;
+    max-width: 620px;
+}
+
+.hero-badge-card {
+    background: #ffffff;
+    border: 1px solid #eadfd6;
+    border-radius: 16px;
+    padding: 22px 26px;
+    box-shadow: 0 4px 16px rgba(43, 32, 20, 0.05);
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    justify-self: end;
+    max-width: 340px;
+    width: 100%;
+}
+
+.hero-badge-card .badge-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: #c1ecd4;
+    color: #012d1d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.hero-badge-card .badge-icon .material-symbols-outlined {
+    font-size: 28px;
+}
+
+.hero-badge-card .badge-val {
+    font-size: 26px;
+    font-weight: 800;
+    color: #012d1d;
+    line-height: 1.1;
+}
+
+.hero-badge-card .badge-label {
+    font-size: 11px;
+    font-weight: 700;
+    color: #414844;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 4px;
+}
+
+/* =========================================
+   4 QUALITY PILLARS
+   ========================================= */
+.pillars-section {
+    padding: 30px 0 60px;
+}
+
+.pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.pillar-card {
+    background: #ffffff;
+    border: 1px solid #eadfd6;
+    border-radius: 16px;
+    padding: 28px 24px;
+    box-shadow: 0 2px 10px rgba(43, 32, 20, 0.04);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.pillar-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(27, 67, 50, 0.08);
+    border-color: #c1ecd4;
+}
+
+.pillar-card .icon-circle {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: #fff1e6;
+    color: #012d1d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 18px;
+    transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.pillar-card:hover .icon-circle {
+    background: #012d1d;
+    color: #ffffff;
+}
+
+.pillar-card .pillar-num {
+    font-size: 12px;
+    font-weight: 700;
+    color: #2c694e;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+}
+
+.pillar-card h2 {
+    font-size: 19px;
+    font-weight: 700;
+    color: #012d1d;
+    line-height: 1.35;
+    margin-bottom: 10px;
+}
+
+.pillar-card p {
+    font-size: 14px;
+    color: #414844;
+    line-height: 1.65;
+}
+
+.pillar-card .pillar-check {
+    margin-top: 20px;
+    padding-top: 14px;
+    border-top: 1px solid #f4e8dc;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #2c694e;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.pillar-card .pillar-check .material-symbols-outlined {
+    font-size: 16px;
+}
+
+/* =========================================
+   RAW MATERIAL PANTRY (5 INGREDIENTS)
+   ========================================= */
+.pantry-section {
+    background: #fff1e6;
+    padding: 60px 0;
+}
+
+.pantry-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 36px;
+}
+
+.pantry-header .section-tag {
+    font-size: 12px;
+    font-weight: 700;
+    color: #2c694e;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    display: block;
+    margin-bottom: 6px;
+}
+
+.pantry-header h2 {
+    font-size: 32px;
+    font-weight: 800;
+    color: #012d1d;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+}
+
+.pantry-header p {
+    font-size: 15px;
+    color: #414844;
+    max-width: 440px;
+    line-height: 1.65;
+}
+
+.pantry-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 18px;
+}
+
+.ingredient-card {
+    background: #ffffff;
+    border: 1px solid #eadfd6;
+    border-radius: 14px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 8px rgba(43, 32, 20, 0.04);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.ingredient-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(27, 67, 50, 0.08);
+}
+
+.ingredient-card .img-wrap {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #fff8f4;
+    margin-bottom: 14px;
+}
+
+.ingredient-card .img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.ingredient-card:hover .img-wrap img {
+    transform: scale(1.06);
+}
+
+.ingredient-card .img-tag {
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    background: rgba(255, 248, 244, 0.95);
+    backdrop-filter: blur(4px);
+    color: #012d1d;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.ingredient-card h3 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #012d1d;
+    margin-bottom: 2px;
+}
+
+.ingredient-card .sub-tag {
+    font-size: 12px;
+    font-weight: 600;
+    color: #a67c1e;
+    margin-bottom: 8px;
+}
+
+.ingredient-card p {
+    font-size: 13px;
+    color: #414844;
+    line-height: 1.55;
+}
+
+/* =========================================
+   PURITY CHECKPOINTS (3 COLUMNS)
+   ========================================= */
+.purity-section {
+    padding: 65px 0 50px;
+}
+
+.purity-intro {
+    text-align: center;
+    max-width: 680px;
+    margin: 0 auto 40px;
+}
+
+.purity-intro .section-tag {
+    font-size: 12px;
+    font-weight: 700;
+    color: #2c694e;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    display: block;
+    margin-bottom: 6px;
+}
+
+.purity-intro h2 {
+    font-size: 32px;
+    font-weight: 800;
+    color: #012d1d;
+    letter-spacing: -0.01em;
+    margin-bottom: 10px;
+}
+
+.purity-intro p {
+    font-size: 15px;
+    color: #414844;
+    line-height: 1.65;
+}
+
+.purity-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 26px;
+}
+
+.purity-card {
+    background: #ffffff;
+    border: 1px solid #eadfd6;
+    border-radius: 16px;
+    padding: 32px 26px;
+    box-shadow: 0 2px 10px rgba(43, 32, 20, 0.04);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.purity-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(27, 67, 50, 0.08);
+}
+
+.purity-card .icon-wrap {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #fff1e6;
+    color: #2c694e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 18px;
+}
+
+.purity-card .icon-wrap .material-symbols-outlined {
+    font-size: 24px;
+}
+
+.purity-card h3 {
+    font-size: 19px;
+    font-weight: 700;
+    color: #012d1d;
+    margin-bottom: 10px;
+}
+
+.purity-card p {
+    font-size: 14px;
+    color: #414844;
+    line-height: 1.65;
+}
+
+/* =========================================
+   QUALITY PLEDGE CTA BANNER
+   ========================================= */
+.pledge-section {
+    padding-bottom: 80px;
+}
+
+.pledge-box {
+    position: relative;
+    background: #012d1d;
+    color: #ffffff;
+    border-radius: 18px;
+    padding: 50px 48px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(1, 45, 29, 0.15);
+}
+
+.pledge-box .watermark-icon {
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    font-size: 200px;
+    color: rgba(255, 255, 255, 0.04);
+    user-select: none;
+    pointer-events: none;
+}
+
+.pledge-box .pledge-content {
+    position: relative;
+    z-index: 2;
+    max-width: 740px;
+}
+
+.pledge-box .pledge-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #1b4332;
+    color: #86af99;
+    padding: 5px 14px;
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 18px;
+}
+
+.pledge-box blockquote {
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.35;
+    letter-spacing: -0.015em;
+    color: #ffffff;
+    margin-bottom: 14px;
+}
+
+.pledge-box p {
+    font-size: 15px;
+    color: #c1ecd4;
+    line-height: 1.7;
+    margin-bottom: 26px;
+}
+
+.pledge-box .pledge-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.btn-accent {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #ffdf96;
+    color: #251a00;
+    padding: 12px 26px;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-accent:hover {
+    background: #e7c268;
+    transform: translateY(-2px);
+}
+
+.btn-link-light {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #ffffff;
+    padding: 12px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.btn-link-light:hover {
+    color: #c1ecd4;
+}
+
+/* =========================================
+   RESPONSIVE LAYOUT
+   ========================================= */
+@media (max-width: 1024px) {
+    .pillars-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .pantry-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .quality-hero .hero-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-badge-card {
+        justify-self: start;
+    }
+
+    .pantry-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .purity-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pledge-box {
+        padding: 36px 28px;
+    }
+
+    .pledge-box blockquote {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 640px) {
+    .quality-hero {
+        padding: 30px 0 25px;
+    }
+
+    .hero-text h1 {
+        font-size: 32px;
+    }
+
+    .pillars-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pantry-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pledge-section {
+        padding-bottom: 50px;
+    }
+}

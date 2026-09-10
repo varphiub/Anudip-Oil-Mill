@@ -50,7 +50,7 @@
             <a href="about.html">About Us</a>
             <a href="products.html">Products</a>
             <a href="process.html">Manufacturing Process</a>
-            <a href="lab-reports.html">Lab Reports</a>
+            <a href="quality.html">Quality</a>
             <a href="gallery.html">Gallery</a>
             <a href="contact.html">Contact Us</a>
         </nav>
@@ -82,7 +82,7 @@
         <a href="about.html">About Us</a>
         <a href="products.html">Products</a>
         <a href="process.html">Manufacturing Process</a>
-        <a href="lab-reports.html">Lab Reports</a>
+        <a href="quality.html">Quality</a>
         <a href="gallery.html">Gallery</a>
         <a href="contact.html">Contact Us</a>
     </div>
@@ -125,7 +125,7 @@
             <a href="about.html">About Us</a>
             <a href="products.html">Products</a>
             <a href="process.html">Manufacturing Process</a>
-            <a href="lab-reports.html">Lab Reports & Quality</a>
+            <a href="quality.html">Quality</a>
             <a href="gallery.html">Gallery</a>
             <a href="contact.html">Contact Us</a>
         </div>
