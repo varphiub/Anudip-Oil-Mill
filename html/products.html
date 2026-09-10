@@ -10,9 +10,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
 
-    <!-- Component CSS -->
+    <!-- Component & Common CSS -->
     <link rel="stylesheet" href="../components/header.css">
     <link rel="stylesheet" href="../components/footer.css">
+    <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/product.css">
 </head>
 <body>
@@ -23,14 +24,16 @@
         
     <section class="product-intro">
 
-        <div class="product-intro-text">
-            <h1>Our Products</h1>
+        <div class="product-intro-container">
+            <div class="product-intro-text">
+                <h1>Our Products</h1>
 
-            <p>
-                Explore our range of 100% pure cold-pressed edible oils,
-                slowly churned at under 45°C to preserve unadulterated
-                nutrients, vital antioxidants, and raw seed essence.
-            </p>
+                <p>
+                    Explore our range of 100% pure cold-pressed edible oils,
+                    slowly churned at under 45°C to preserve unadulterated
+                    nutrients, vital antioxidants, and raw seed essence.
+                </p>
+            </div>
         </div>
 
     </section>
@@ -69,39 +72,24 @@
                 Castor
             </button>
 
+            <button class="filter-btn" data-category="flaxseed">
+                Flaxseed
+            </button>
+
+            <button class="filter-btn" data-category="almond">
+                Almond
+            </button>
+
         </div>
 
         <p class="product-variety">
             <span></span>
-            6 Authentic Varieties Available
+            8 Authentic Varieties Available
         </p>
 
     </section>
 
 
-    <!-- Cart Information -->
-    <section class="cart-notice">
-
-        <div class="cart-notice-content">
-
-            <span class="cart-icon">🛒</span>
-
-            <div>
-                <strong>Cart counter demo:</strong>
-
-                <p>
-                    Cart count updates automatically when you click
-                    Add to Cart.
-                </p>
-            </div>
-
-        </div>
-
-        <span class="cart-items" id="cart-items">
-            0 items selected
-        </span>
-
-    </section>
 
 
     <!-- Product Grid -->
@@ -114,8 +102,8 @@
             <div class="product-image">
 
                 <img
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-vs-mtdcKVP2yshtMOwL8QuvqV5JbdXLxlgyXFK-MalNt3zdpv0SU-A_oOAifNZJyZum0ThjbFraRf5B2F6JclnrYcEnUIgUZJ1fq65FoItbGn1A9TjfLoZqrj12z75npd6_oPfOknfp7hCfaOSz2ZqzI3_QmAbn4EfaW3bCk6wWQexGAGGPx-iDkhI2-95zrmC0Ia-N1du1_jrgmNYQgL5oRnKlmbIpNFuh7GexLgd1m5KaqDlh9"
-                    alt="Groundnut Oil">
+                    src="../public/images/groundnut_oil.jpg"
+                    alt="Wood Pressed Groundnut Oil">
 
                 <span class="product-badge">
                     Wood Pressed
@@ -158,7 +146,7 @@
                         data-name="Groundnut Oil"
                         data-price="250">
 
-                        🛒 Add to Cart
+                        Add to Cart
 
                     </button>
 
@@ -175,8 +163,8 @@
             <div class="product-image">
 
                 <img
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIVIomg9NI29EShbwbgOAYV26wBH9rSwv75mefg1ZpPjLPYBkzcgyRdAz0UtoXP34iMx1JOGhXY4mSn1nWlmzNiANA6GK5d6mBm6_5rOtuLYe9YwWUnFSOkY-EkMoLvTFBfo3IDFAK8m1Pwz0e9CAxsLGfJWmsIOBqRdxAKEeJJC74M11CgOYJrT1JZC9VrD1KMjqPo-EJIMheyTAlgyQsp5YXVh1o5hurPwdPWv9v2jcMImv9vyje"
-                    alt="Coconut Oil">
+                    src="../public/images/coconut_oil.jpg"
+                    alt="Virgin Coconut Oil">
 
                 <span class="product-badge">
                     Sulfur-Free
@@ -189,7 +177,7 @@
 
                 <div class="product-meta">
                     <span>Multi-Purpose</span>
-                    <span>1 Litre Tin</span>
+                    <span>1 Litre Bottle</span>
                 </div>
 
                 <h2>Coconut Oil</h2>
@@ -219,7 +207,7 @@
                         data-name="Coconut Oil"
                         data-price="280">
 
-                        🛒 Add to Cart
+                        Add to Cart
 
                     </button>
 
@@ -236,8 +224,8 @@
             <div class="product-image">
 
                 <img
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWPzV_G_zFltdISxgau0a3QJIvpJwtBefotid3MTKYkIPuGW1QbjxXHNdis2Vc297sJb-5_jrxyEg3DzqVEdeABq9MGc1HW1E8u1d8YeWMpSrbeFUdmUg88_e595x9Wns3mwA-1Q2gXC3VTa9TCV7GLNDJJRN9xQQ5biTdrZyIAbzqkwH7GVJnuayIVlfHZ_mEURWBxvrxswuUl3GeJQUIJWKrLrgpgK-GJ8ftBFB5Upux7HZ6e6_2"
-                    alt="Sesame Oil">
+                    src="../public/images/sesame_oil.jpg"
+                    alt="Sesame Gingelly Oil">
 
                 <span class="product-badge">
                     Palm Jaggery Blend
@@ -280,7 +268,7 @@
                         data-name="Sesame Oil"
                         data-price="320">
 
-                        🛒 Add to Cart
+                        Add to Cart
 
                     </button>
 
@@ -297,8 +285,8 @@
             <div class="product-image">
 
                 <img
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZMYv_10wKnYRH1dUNiTrezJsb6vl_zOqzN9lg-5qBFy5CG_suPlYmnAFPc8Mz9s9P0j5f7fSf9Od5G9RP0W3kjI4S_0YeAm2AK6RqmvVq5W3In2AdOB8_-sDycE70elhMh7sG1WxxIuUx6qxOz53C8wGiSqMNZFL2grDpaiwiSNJMe0-3CCqDkbkxRHHFH0ADsYu9g3KtDxMaICwuoIMJa4ZcERBW5E8MVza7GKoa-yCyziTnb29E"
-                    alt="Sunflower Oil">
+                    src="../public/images/sunflower_oil.jpg"
+                    alt="Sunflower Gold Oil">
 
                 <span class="product-badge">
                     Gravity Filtered
@@ -311,7 +299,7 @@
 
                 <div class="product-meta">
                     <span>High Smoke Point</span>
-                    <span>1 Litre Tin</span>
+                    <span>1 Litre Bottle</span>
                 </div>
 
                 <h2>Sunflower Oil</h2>
@@ -341,7 +329,7 @@
                         data-name="Sunflower Oil"
                         data-price="220">
 
-                        🛒 Add to Cart
+                        Add to Cart
 
                     </button>
 
@@ -358,8 +346,8 @@
             <div class="product-image">
 
                 <img
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyZREBRtZlqGzxTkczvno2J9Ipr_LGrjSiERBtnsQMHInlAgK8zoAweXltP08G0HBr4SE5nukkxSefGIyIy2kjxdfcbXdJMziRRibF3CDDfRIxQJlLWdVJ9R7cAAla86a6K1VJkmVSjeUZBbgZlI-oOrSeADRFOOHc0Vuy6DZLx9S-JSdU9jMPSKGNd7qKXhd-9UQMuM8PxJd9VJx4BXoOcuoMKhyLwZxGr4R7VTQvOjdppNU8d1F2"
-                    alt="Mustard Oil">
+                    src="../public/images/mustard_oil.jpg"
+                    alt="Kachi Ghani Mustard Oil">
 
                 <span class="product-badge">
                     Kachi Ghani
@@ -402,7 +390,7 @@
                         data-name="Mustard Oil"
                         data-price="240">
 
-                        🛒 Add to Cart
+                        Add to Cart
 
                     </button>
 
@@ -419,8 +407,8 @@
             <div class="product-image">
 
                 <img
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmQ7IdnnrXx3TcBwCTDQrZ4oI0aBR22xBjW3yv5gW8KEuOyZV_RVm4xEYlLBFG8sNNxj6Irh7oDCvU7ZyOfpILqvIGN9s-DfKQf6HeXw-HJ4zrs9VeukzC_jRonNfvfFeKkhY609Onlr_8ucV_2xJEppStCoh84TtjdXAL6BkmqEg3Zoyc8odq6JiePAciAUo5qJIazYMln_rBQKGRYtqIRz_MHOVsEg_8lrhM80igmPRHvbYjHKpT"
-                    alt="Castor Oil">
+                    src="../public/images/castor_oil.jpg"
+                    alt="Pure Cold Pressed Castor Oil">
 
                 <span class="product-badge">
                     Ayurvedic Grade
@@ -440,8 +428,8 @@
 
                 <p>
                     100% pure expeller-pressed unrefined oil for
-                    traditional wellness, massage, eyebrow, and
-                    root care.
+                    traditional wellness, therapeutic massage, and
+                    deep root nourishment.
                 </p>
 
 
@@ -463,7 +451,129 @@
                         data-name="Castor Oil"
                         data-price="190">
 
-                        🛒 Add to Cart
+                        Add to Cart
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- Flaxseed Oil (NEW PRODUCT 1) -->
+        <article class="product-card" data-category="flaxseed">
+
+            <div class="product-image">
+
+                <img
+                    src="../public/images/flaxseed_oil.jpg"
+                    alt="Organic Cold-Pressed Flaxseed Oil">
+
+                <span class="product-badge">
+                    Omega-3 Rich
+                </span>
+
+            </div>
+
+
+            <div class="product-card-content">
+
+                <div class="product-meta">
+                    <span>Heart & Vitality</span>
+                    <span>1 Litre Bottle</span>
+                </div>
+
+                <h2>Flaxseed Oil</h2>
+
+                <p>
+                    Cold-pressed raw flaxseeds packed with plant Omega-3
+                    fatty acids and lignans for heart vitality and
+                    metabolic wellness.
+                </p>
+
+
+                <div class="product-action">
+
+                    <div class="product-price">
+
+                        <small>Price</small>
+
+                        <strong>
+                            ₹360
+                            <span>/ 1 L</span>
+                        </strong>
+
+                    </div>
+
+                    <button
+                        class="add-cart-btn"
+                        data-name="Flaxseed Oil"
+                        data-price="360">
+
+                        Add to Cart
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- Sweet Almond Oil (NEW PRODUCT 2) -->
+        <article class="product-card" data-category="almond">
+
+            <div class="product-image">
+
+                <img
+                    src="../public/images/almond_oil.jpg"
+                    alt="Pure Sweet Almond Oil">
+
+                <span class="product-badge">
+                    100% Pure
+                </span>
+
+            </div>
+
+
+            <div class="product-card-content">
+
+                <div class="product-meta">
+                    <span>Vitamin E Enriched</span>
+                    <span>500 mL Bottle</span>
+                </div>
+
+                <h2>Sweet Almond Oil</h2>
+
+                <p>
+                    Extracted from premium sweet almonds. Rich in Vitamin E,
+                    ideal for radiant skin glow, hair shine, and nourishing
+                    wellness.
+                </p>
+
+
+                <div class="product-action">
+
+                    <div class="product-price">
+
+                        <small>Price</small>
+
+                        <strong>
+                            ₹520
+                            <span>/ 500 mL</span>
+                        </strong>
+
+                    </div>
+
+                    <button
+                        class="add-cart-btn"
+                        data-name="Sweet Almond Oil"
+                        data-price="520">
+
+                        Add to Cart
 
                     </button>
 
@@ -520,6 +630,7 @@
 </main>
     <div id="footer"></div>
     <script src="../components/components.js"></script>
+    <script src="../js/cart.js"></script>
     <script src="../js/product.js"></script>
 </body>
 </html>

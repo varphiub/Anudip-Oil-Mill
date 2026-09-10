@@ -1,6 +1,6 @@
 /* =========================================
    ANUDIP OIL MILL
-   COMMON CSS
+   COMMON CSS & GLOBAL DESIGN SYSTEM
 ========================================= */
 
 
@@ -8,6 +8,10 @@
 
 :root {
     --font-family: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+    /* Container Settings (Unified across all pages) */
+    --container-width: 90%;
+    --container-max-width: 1200px;
 
     /* Typography Scale */
     --font-size-hero: 42px;
@@ -50,18 +54,19 @@
     --text-subtle: #717973;
     --border: #eadfd6;
 
-    --radius: 8px;
+    --radius-sm: 6px;
+    --radius: 12px;
     --radius-large: 16px;
     --radius-full: 999px;
-    --transition: 0.3s ease;
+    --transition: 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    --transition-fast: 0.2s ease;
 }
 
-/* ---------- RESET ---------- */
-* {
+/* ---------- RESET & BASE ---------- */
+*, *::before, *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: var(--font-family);
 }
 
 html {
@@ -75,6 +80,18 @@ body {
     font-size: var(--font-size-body);
     line-height: var(--line-height-body);
     -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+}
+
+/* ---------- UNIFIED CONTAINER ---------- */
+.container,
+.site-container {
+    width: var(--container-width);
+    max-width: var(--container-max-width);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 /* Typography Base Classes */
@@ -134,40 +151,127 @@ p {
     margin-bottom: 10px;
 }
 
-
 /* ---------- IMAGES ---------- */
-
 img {
     max-width: 100%;
     display: block;
 }
 
-
 /* ---------- LINKS ---------- */
-
 a {
     text-decoration: none;
     color: inherit;
-}
-
-
-/* ---------- CONTAINER ---------- */
-
-.container {
-
-    width: 90%;
-
-    max-width: 1200px;
-
-    margin: auto;
-
+    transition: color var(--transition-fast), transform var(--transition-fast);
 }
 
 
 /* =========================================
-/* =========================================
-   COMMON LAYOUT & UTILITIES
+   BEGINNER ANIMATIONS & KEYFRAMES
 ========================================= */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(22px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes floatGentle {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Automatic Page Entry Animation */
+main {
+    animation: fadeIn 0.4s ease-out both;
+}
+
+/* Section Header Entrance */
+.intro-content,
+.product-intro-text,
+.quality-hero .hero-text,
+.contact-hero,
+.lab-hero-content,
+.hero-container,
+.process-heading {
+    animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* Global Card Hover Micro-Interactions */
+.product-card,
+.feature,
+.highlight-card,
+.stat-card,
+.quality-card,
+.report-card,
+.form-card,
+.promise-card,
+.step-card,
+.checkpoint-card {
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.product-card:hover,
+.feature:hover,
+.highlight-card:hover,
+.stat-card:hover,
+.quality-card:hover,
+.report-card:hover,
+.promise-card:hover {
+    transform: translateY(-4px) !important;
+}
+
+/* Button & Interactive Element Transitions */
+button,
+.btn,
+.add-cart-btn,
+.filter-btn,
+.hero-cta-primary,
+.hero-cta-secondary {
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+button:active,
+.btn:active,
+.add-cart-btn:active,
+.filter-btn:active {
+    transform: scale(0.97) !important;
+}
+
+/* Image zoom inside cards on hover */
+.product-card:hover img,
+.gallery-card:hover img,
+.quality-card:hover img {
+    transform: scale(1.05);
+}
 
 
 /* =========================================
@@ -175,73 +279,78 @@ a {
 ========================================= */
 
 .btn {
-
     display: inline-flex;
-
     align-items: center;
-
     justify-content: center;
-
     padding: 12px 24px;
-
     border-radius: var(--radius-full);
-
     font-size: 14px;
-
     font-weight: 600;
-
     transition: var(--transition);
-
     cursor: pointer;
-
+    border: none;
 }
-
 
 .btn-primary {
-
     background-color: var(--primary);
-
     color: white;
-
 }
-
 
 .btn-primary:hover {
-
     background-color: var(--secondary);
-
     transform: translateY(-2px);
-
+    box-shadow: 0 4px 12px rgba(1, 45, 29, 0.15);
 }
-
 
 .btn-accent {
-
     background-color: var(--accent);
-
     color: var(--text-main);
-
 }
-
 
 .btn-accent:hover {
-
     transform: translateY(-2px);
-
+    box-shadow: 0 4px 12px rgba(233, 196, 106, 0.25);
 }
-
 
 .btn-outline-light {
-
     border: 1px solid rgba(255, 255, 255, 0.7);
-
     color: white;
+}
 
+.btn-outline-light:hover {
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 
-.btn-outline-light:hover {
+/* =========================================
+   GLOBAL RESPONSIVENESS UTILITIES
+========================================= */
 
-    background-color: rgba(255, 255, 255, 0.1);
+@media (max-width: 1024px) {
+    :root {
+        --font-size-hero: 36px;
+        --font-size-h2: 28px;
+    }
+}
 
+@media (max-width: 768px) {
+    :root {
+        --container-width: 92%;
+        --font-size-hero: 32px;
+        --font-size-h2: 26px;
+        --font-size-body: 14px;
+    }
+
+    .container,
+    .site-container {
+        width: 92%;
+    }
+}
+
+@media (max-width: 480px) {
+    :root {
+        --container-width: 92%;
+        --font-size-hero: 28px;
+        --font-size-h2: 23px;
+    }
 }

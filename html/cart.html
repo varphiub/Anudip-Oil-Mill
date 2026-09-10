@@ -10,9 +10,10 @@
     rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
     rel="stylesheet" />
-  <!-- Component CSS -->
+  <!-- Component & Common CSS -->
   <link rel="stylesheet" href="../components/header.css">
   <link rel="stylesheet" href="../components/footer.css">
+  <link rel="stylesheet" href="../css/common.css">
   <link rel="stylesheet" href="../css/cart.css">
 </head>
 
@@ -50,165 +51,33 @@
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-start">
           <!-- Left Column: Cart Items List (Approx 65% / 8 Cols) -->
           <div class="lg:col-span-8 flex flex-col gap-space-lg">
-            <!-- Free Delivery Progress Card -->
+            <!-- Free Delivery Progress Card (Single Dynamic Card) -->
             <article
+              id="free-delivery-card"
               class="bg-surface-container-lowest p-space-md md:p-space-lg rounded-xl shadow-sm flex flex-col gap-space-sm">
               <div class="flex items-center justify-between gap-space-sm">
                 <div class="flex items-center gap-space-xs text-primary">
                   <span class="material-symbols-outlined text-secondary">local_shipping</span>
-                  <span class="font-label-lg text-label-lg font-bold">Add ₹200 more for FREE doorstep delivery!</span>
+                  <span id="delivery-msg" class="font-label-lg text-label-lg font-bold">Add ₹200 more for FREE doorstep delivery!</span>
                 </div>
-                <span class="font-label-md text-label-md text-secondary font-bold">78% Qualified</span>
+                <span id="delivery-pct" class="font-label-md text-label-md text-secondary font-bold">78% Qualified</span>
               </div>
               <!-- Progress Bar Container -->
               <div class="w-full h-2.5 bg-surface-container rounded-full overflow-hidden">
-                <div class="h-full bg-secondary rounded-full transition-all duration-500" style="width: 78%;"></div>
+                <div id="delivery-bar-fill" class="h-full bg-secondary rounded-full transition-all duration-500" style="width: 78%;"></div>
               </div>
               <p class="font-body-sm text-body-sm text-on-surface-variant">
                 Standard express courier to all pin codes. Safely packed in bubble-free compostable straw cartons.
               </p>
             </article>
-            <!-- Cart Items Container -->
-            <div class="flex flex-col gap-space-md" id="cart-items-wrapper">
-              <!-- Item 1: Groundnut Oil -->
-              <article
-                class="bg-surface-container-lowest p-space-md md:p-space-lg rounded-xl shadow-sm flex flex-col sm:flex-row items-center gap-space-md transition-all"
-                id="item-groundnut">
-                <!-- Product Thumbnail -->
-                <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-lg overflow-hidden bg-surface-container shrink-0">
-                  <img class="w-full h-full object-cover"
-                    data-alt="An artisanal amber glass bottle of wood pressed unrefined golden groundnut oil standing gracefully against a warm rustic linen cloth backdrop with diffused sunlit kitchen lighting."
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBji2Dk0jp0jGvFOWDs2UVATa1q3DvNrdis01B0TytYzwqUwFniNV-izLn_WbHyHurNCY0iTj6BUcd6PuJ12NVPzDSoEuIsjaIIRI6ZlQkcYtQFgnewVaIEgLB--2bTVAt_AAhiKHIdqusgXvnr-vJ2_7Rh6FzeJPgr676Bc_YO_WIh-ofZxjRpkPYjX65J0WoErVXnNVlZSygo2-g0kHYD_Mxc3ldNfiSPT5o-x0dTinTq0V7cRRI3" />
-                </div>
-                <!-- Product Details -->
-                <div class="flex flex-col flex-1 min-w-0 w-full text-left">
-                  <div class="flex items-center gap-space-xs">
-                    <span
-                      class="font-label-sm text-label-sm uppercase tracking-wider bg-surface-container text-secondary px-space-xs py-space-2xs rounded-full">Wood
-                      Pressed</span>
-                    <span class="font-label-sm text-label-sm text-on-surface-variant">Batch #GN-402</span>
-                  </div>
-                  <h2 class="font-headline-sm text-headline-sm text-primary mt-space-2xs">Wood Pressed Groundnut Oil
-                  </h2>
-                  <p class="font-body-sm text-body-sm text-on-surface-variant">1 Litre Glass Bottle • Cold Churned &lt; 45°C</p>
-                  <div class="flex items-center gap-space-sm mt-space-xs">
-                    <span class="font-label-md text-label-md text-on-surface-variant">Unit Price:</span>
-                    <span class="font-label-lg text-label-lg text-primary font-bold">₹250</span>
-                  </div>
-                </div>
-                <!-- Controls & Subtotal Column -->
-                <div
-                  class="flex sm:flex-col items-center sm:items-end justify-between w-full sm:w-auto gap-space-sm pt-space-xs sm:pt-0">
-                  <!-- Quantity Selector -->
-                  <div class="flex items-center bg-surface-container-low rounded-full p-space-2xs shadow-sm">
-                    <button aria-label="Decrease quantity"
-                      class="w-8 h-8 rounded-full bg-surface-container-lowest text-primary flex items-center justify-center font-bold hover:bg-secondary hover:text-on-secondary transition-colors"
-                      onclick="changeQty('groundnut', -1)" type="button">
-                      <span class="material-symbols-outlined text-[16px]">remove</span>
-                    </button>
-                    <span class="w-10 text-center font-label-lg text-label-lg text-primary font-bold"
-                      id="qty-groundnut">2</span>
-                    <button aria-label="Increase quantity"
-                      class="w-8 h-8 rounded-full bg-surface-container-lowest text-primary flex items-center justify-center font-bold hover:bg-secondary hover:text-on-secondary transition-colors"
-                      onclick="changeQty('groundnut', 1)" type="button">
-                      <span class="material-symbols-outlined text-[16px]">add</span>
-                    </button>
-                  </div>
-                  <!-- Item Subtotal -->
-                  <div class="text-right">
-                    <span class="font-body-sm text-body-sm text-on-surface-variant block sm:hidden">Total:</span>
-                    <span class="font-headline-sm text-headline-sm text-primary font-bold"
-                      id="subtotal-groundnut">₹500</span>
-                  </div>
-                  <!-- Remove Action -->
-                  <button
-                    class="flex items-center gap-space-2xs font-label-sm text-label-sm text-error hover:opacity-80 transition-opacity"
-                    onclick="removeItem('groundnut')" type="button">
-                    <span class="material-symbols-outlined text-[16px]">delete</span>
-                    <span>Remove</span>
-                  </button>
-                </div>
-              </article>
-              <!-- Item 2: Virgin Coconut Oil -->
-              <article
-                class="bg-surface-container-lowest p-space-md md:p-space-lg rounded-xl shadow-sm flex flex-col sm:flex-row items-center gap-space-md transition-all"
-                id="item-coconut">
-                <!-- Product Thumbnail -->
-                <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-lg overflow-hidden bg-surface-container shrink-0">
-                  <img class="w-full h-full object-cover"
-                    data-alt="A vintage unbleached steel eco-canister tin filled with crystal clear organic virgin coconut oil with fresh sliced coconut copra arranged beside on a clean warm wooden table."
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwH6N5dUwKotV1_8CYzwheMLHmhgiI4ufF0XtgU43oonU8rSGz1_viedrPRpTmt0W95pI4d96fAPXlW4WMIPp_zP0Ab7wPtA3p-ePbh8nFdtzXa8Mle2Wd5KIfT23dWTw3lljeuKzD3chk85kyve2OnyaC1Zc5es-s5-W4vUNQDMI-bPZeJ3fI-H7Vt3FSEiZI3wQneFUpu29iLMXboedZodwIeihUCKOLa0zzBh3K8M2RgWCmbOSJ" />
-                </div>
-                <!-- Product Details -->
-                <div class="flex flex-col flex-1 min-w-0 w-full text-left">
-                  <div class="flex items-center gap-space-xs">
-                    <span
-                      class="font-label-sm text-label-sm uppercase tracking-wider bg-surface-container text-secondary px-space-xs py-space-2xs rounded-full">Sulfur
-                      Free</span>
-                    <span class="font-label-sm text-label-sm text-on-surface-variant">Batch #CC-810</span>
-                  </div>
-                  <h2 class="font-headline-sm text-headline-sm text-primary mt-space-2xs">Sun-Dried Pure Virgin Coconut
-                    Oil</h2>
-                  <p class="font-body-sm text-body-sm text-on-surface-variant">1 Litre Eco Tin • Unbleached & Raw</p>
-                  <div class="flex items-center gap-space-sm mt-space-xs">
-                    <span class="font-label-md text-label-md text-on-surface-variant">Unit Price:</span>
-                    <span class="font-label-lg text-label-lg text-primary font-bold">₹280</span>
-                  </div>
-                </div>
-                <!-- Controls & Subtotal Column -->
-                <div
-                  class="flex sm:flex-col items-center sm:items-end justify-between w-full sm:w-auto gap-space-sm pt-space-xs sm:pt-0">
-                  <!-- Quantity Selector -->
-                  <div class="flex items-center bg-surface-container-low rounded-full p-space-2xs shadow-sm">
-                    <button aria-label="Decrease quantity"
-                      class="w-8 h-8 rounded-full bg-surface-container-lowest text-primary flex items-center justify-center font-bold hover:bg-secondary hover:text-on-secondary transition-colors"
-                      onclick="changeQty('coconut', -1)" type="button">
-                      <span class="material-symbols-outlined text-[16px]">remove</span>
-                    </button>
-                    <span class="w-10 text-center font-label-lg text-label-lg text-primary font-bold"
-                      id="qty-coconut">1</span>
-                    <button aria-label="Increase quantity"
-                      class="w-8 h-8 rounded-full bg-surface-container-lowest text-primary flex items-center justify-center font-bold hover:bg-secondary hover:text-on-secondary transition-colors"
-                      onclick="changeQty('coconut', 1)" type="button">
-                      <span class="material-symbols-outlined text-[16px]">add</span>
-                    </button>
-                  </div>
-                  <!-- Item Subtotal -->
-                  <div class="text-right">
-                    <span class="font-body-sm text-body-sm text-on-surface-variant block sm:hidden">Total:</span>
-                    <span class="font-headline-sm text-headline-sm text-primary font-bold"
-                      id="subtotal-coconut">₹280</span>
-                  </div>
-                  <!-- Remove Action -->
-                  <button
-                    class="flex items-center gap-space-2xs font-label-sm text-label-sm text-error hover:opacity-80 transition-opacity"
-                    onclick="removeItem('coconut')" type="button">
-                    <span class="material-symbols-outlined text-[16px]">delete</span>
-                    <span>Remove</span>
-                  </button>
-                </div>
-              </article>
-              <!-- Empty Cart State Notice (Hidden by default) -->
-              <div
-                class="hidden bg-surface-container-lowest p-space-2xl rounded-xl text-center flex-col items-center gap-space-md shadow-sm"
-                id="empty-cart-state">
-                <div class="w-16 h-16 rounded-full bg-surface-container flex items-center justify-center text-primary">
-                  <span class="material-symbols-outlined text-[36px]">remove_shopping_cart</span>
-                </div>
-                <h3 class="font-headline-md text-headline-md text-primary">Your cart is empty</h3>
-                <p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm">
-                  You have cleared all items from your basket. Check out our fresh weekly pressed harvest oils.
-                </p>
-                <a class="bg-primary text-on-primary px-space-lg py-space-xs rounded-full font-label-lg text-label-lg hover:bg-secondary transition-all"
-                  data-path="products" href="#">
-                  Browse Fresh Harvest
-                </a>
-              </div>
-            </div>
+
+            <!-- Cart Items Container (Dynamically Populated by js/cart.js) -->
+            <div class="flex flex-col gap-space-md" id="cart-items-wrapper"></div>
+
             <!-- Bottom Actions Row -->
             <div class="flex flex-col sm:flex-row items-center justify-between gap-space-md pt-space-xs">
               <a class="inline-flex items-center gap-space-xs font-label-lg text-label-lg text-primary hover:text-secondary transition-colors"
-                data-path="products" href="#">
+                href="products.html">
                 <span class="material-symbols-outlined text-[20px]">arrow_back</span>
                 <span>Continue Shopping</span>
               </a>
@@ -244,11 +113,11 @@
                 </div>
                 <div class="flex justify-between items-center">
                   <span class="text-on-surface-variant">Standard Doorstep Delivery</span>
-                  <span class="font-label-sm text-label-sm text-on-surface line-through">₹50</span>
+                  <span class="font-label-sm text-label-sm text-on-surface" id="summary-delivery-fee">FREE</span>
                 </div>
-                <div class="flex justify-between items-center text-secondary">
-                  <span class="font-label-sm text-label-sm font-bold">Mill Welcome Discount</span>
-                  <span class="font-label-sm text-label-sm font-bold">- ₹50</span>
+                <div class="flex justify-between items-center text-secondary" id="summary-discount-row" style="display:none;">
+                  <span class="font-label-sm text-label-sm font-bold" id="summary-discount-label">Mill Discount</span>
+                  <span class="font-label-sm text-label-sm font-bold" id="summary-discount-val">- ₹0</span>
                 </div>
               </div>
               <!-- Subtle Divider using background shift -->
@@ -305,16 +174,6 @@
                 </div>
               </div>
             </div>
-            <!-- Harvest Batch Info Stamp Box -->
-            <div class="bg-surface-container p-space-md rounded-xl flex items-center gap-space-md">
-              <span class="material-symbols-outlined text-primary text-[32px] shrink-0">oil_barrel</span>
-              <div>
-                <p class="font-label-md text-label-md font-bold text-primary">Farm Batch Freshness</p>
-                <p class="font-body-sm text-body-sm text-on-surface-variant">
-                  Every bottle is cold churned within 48 hours of dispatch from native Saurashtra & Pollachi seed lots.
-                </p>
-              </div>
-            </div>
           </aside>
         </div>
       </section>
@@ -324,8 +183,8 @@
   </main>
   <!-- COMMON FOOTER -->
 <div id="footer"></div>
-  <script src="cart.js"></script>
   <script src="../components/components.js"></script>
+  <script src="../js/cart.js"></script>
 </body>
 
 </html>

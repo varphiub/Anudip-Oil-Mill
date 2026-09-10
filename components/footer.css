@@ -89,10 +89,15 @@
     border-radius: 50% !important;
     color: #0d452f !important;
     text-decoration: none !important;
-    font-family: Arial, sans-serif !important;
-    font-size: 13px !important;
-    font-weight: 600 !important;
     transition: all 0.2s ease !important;
+}
+
+.site-footer .footer-social a svg {
+    display: block !important;
+    width: 16px !important;
+    height: 16px !important;
+    fill: currentColor !important;
+    transition: transform 0.2s ease !important;
 }
 
 .site-footer .footer-social a:hover {
@@ -100,6 +105,10 @@
     color: #ffffff !important;
     border-color: #0d452f !important;
     transform: translateY(-2px) !important;
+}
+
+.site-footer .footer-social a:hover svg {
+    fill: #ffffff !important;
 }
 
 /* COLUMN HEADINGS */
@@ -147,9 +156,21 @@
 
 .site-footer .contact-icon {
     width: 20px !important;
+    height: 20px !important;
+    min-width: 20px !important;
     flex-shrink: 0 !important;
     color: #0d452f !important;
-    font-size: 15px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin-top: 2px !important;
+}
+
+.site-footer .contact-icon svg {
+    width: 18px !important;
+    height: 18px !important;
+    display: block !important;
+    fill: currentColor !important;
 }
 
 .site-footer .contact-row p {
@@ -196,13 +217,13 @@
 /* TABLET */
 @media (max-width: 1000px) {
     .site-footer .footer-container {
-        width: calc(100% - 60px) !important;
+        width: 90% !important;
         grid-template-columns: 1fr 1fr !important;
         row-gap: 45px !important;
         column-gap: 40px !important;
     }
     .site-footer .footer-bottom {
-        width: calc(100% - 60px) !important;
+        width: 90% !important;
     }
     .site-footer .footer-logo {
         width: 70px !important;
@@ -213,7 +234,7 @@
 /* MOBILE */
 @media (max-width: 600px) {
     .site-footer .footer-container {
-        width: calc(100% - 40px) !important;
+        width: 90% !important;
         grid-template-columns: 1fr !important;
         row-gap: 35px !important;
         padding: 45px 0 !important;
@@ -233,7 +254,7 @@
         font-size: 13px !important;
     }
     .site-footer .footer-bottom {
-        width: calc(100% - 40px) !important;
+        width: 90% !important;
         flex-direction: column !important;
         align-items: flex-start !important;
         gap: 15px !important;
