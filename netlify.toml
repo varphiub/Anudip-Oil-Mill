@@ -1,0 +1,73 @@
+# Netlify Configuration for Anudip Oil Mill
+
+[build]
+  publish = "."
+
+# Serve / as html/home.html
+[[redirects]]
+  from = "/"
+  to = "/html/home.html"
+  status = 200
+
+# Handle /home and /home.html
+[[redirects]]
+  from = "/home"
+  to = "/html/home.html"
+  status = 200
+
+# Handle /index.html
+[[redirects]]
+  from = "/index.html"
+  to = "/html/home.html"
+  status = 200
+
+# Pretty URL rewrites for all pages
+[[redirects]]
+  from = "/about"
+  to = "/html/about.html"
+  status = 200
+
+[[redirects]]
+  from = "/products"
+  to = "/html/products.html"
+  status = 200
+
+[[redirects]]
+  from = "/process"
+  to = "/html/process.html"
+  status = 200
+
+[[redirects]]
+  from = "/quality"
+  to = "/html/quality.html"
+  status = 200
+
+[[redirects]]
+  from = "/gallery"
+  to = "/html/gallery.html"
+  status = 200
+
+[[redirects]]
+  from = "/cart"
+  to = "/html/cart.html"
+  status = 200
+
+[[redirects]]
+  from = "/contact"
+  to = "/html/contact.html"
+  status = 200
+
+[[redirects]]
+  from = "/privacy-policy"
+  to = "/html/privacy-policy.html"
+  status = 200
+
+[[redirects]]
+  from = "/terms-services"
+  to = "/html/terms-services.html"
+  status = 200
+
+[[redirects]]
+  from = "/lab-reports"
+  to = "/html/lab-reports.html"
+  status = 200

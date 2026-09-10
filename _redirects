@@ -1,0 +1,13 @@
+/              /html/home.html          200
+/home          /html/home.html          200
+/index.html    /html/home.html          200
+/about         /html/about.html          200
+/products      /html/products.html       200
+/process       /html/process.html        200
+/quality       /html/quality.html        200
+/gallery       /html/gallery.html        200
+/cart          /html/cart.html           200
+/contact       /html/contact.html        200
+/privacy-policy /html/privacy-policy.html 200
+/terms-services /html/terms-services.html 200
+/lab-reports   /html/lab-reports.html    200

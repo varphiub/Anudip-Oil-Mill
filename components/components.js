@@ -71,9 +71,9 @@
     const fallbackHeader = `
 <header class="site-header">
     <div class="header-container">
-        <a href="index.html" class="header-logo"><img src="../public/logo_trasprent.png" alt="Anudip Oil Mill"></a>
+        <a href="home.html" class="header-logo"><img src="../public/logo_trasprent.png" alt="Anudip Oil Mill"></a>
         <nav class="header-nav">
-            <a href="index.html">Home</a>
+            <a href="home.html">Home</a>
             <a href="about.html">About Us</a>
             <a href="products.html">Products</a>
             <a href="process.html">Manufacturing Process</a>
@@ -87,7 +87,7 @@
         </div>
     </div>
     <div id="mobileDrawer" class="mobile-drawer">
-        <a href="index.html">Home</a>
+        <a href="home.html">Home</a>
         <a href="about.html">About Us</a>
         <a href="products.html">Products</a>
         <a href="process.html">Manufacturing Process</a>
@@ -112,7 +112,7 @@
         </div>
         <div class="footer-column">
             <h3>Quick Links</h3>
-            <a href="index.html">Home</a>
+            <a href="home.html">Home</a>
             <a href="about.html">About Us</a>
             <a href="products.html">Products</a>
             <a href="process.html">Manufacturing Process</a>
@@ -183,13 +183,13 @@
     // 5. Active Navigation Highlighting
     function setupActiveNav(targetPath) {
         const currentPath = targetPath || window.location.pathname;
-        let currentPage = currentPath.substring(currentPath.lastIndexOf("/") + 1) || "index.html";
+        let currentPage = currentPath.substring(currentPath.lastIndexOf("/") + 1) || "home.html";
 
         const navLinks = document.querySelectorAll(".header-nav a, .mobile-drawer a");
         navLinks.forEach(link => {
             link.classList.remove("active");
             const href = link.getAttribute("href");
-            if (href === currentPage || (currentPage === "" && href === "index.html")) {
+            if (href === currentPage || ((currentPage === "" || currentPage === "index.html") && href === "home.html")) {
                 link.classList.add("active");
             }
         });
@@ -215,64 +215,9 @@
         }
     }
 
-    // 7. Seamless Client-Side Navigation
+    // 7. Navigation lifecycle
     function setupSeamlessNavigation() {
-        if (window.location.protocol === "file:") return;
-        if (window._spaRouterInitialized) return;
-        window._spaRouterInitialized = true;
-
-        document.addEventListener("click", function (e) {
-            const link = e.target.closest("a");
-            if (!link) return;
-
-            const href = link.getAttribute("href");
-            if (!href || href.startsWith("#") || href.startsWith("mailto:") || href.startsWith("tel:") || href.startsWith("http") || link.target === "_blank") {
-                return;
-            }
-
-            e.preventDefault();
-            loadPage(href, true);
-        });
-
-        window.addEventListener("popstate", function () {
-            loadPage(window.location.pathname, false);
-        });
-    }
-
-    async function loadPage(url, pushState) {
-        try {
-            const res = await fetch(url);
-            if (!res.ok) throw new Error("Failed to load page");
-            const html = await res.text();
-            const parser = new DOMParser();
-            const doc = parser.parseFromString(html, "text/html");
-
-            const newMain = doc.querySelector("main");
-            const currentMain = document.querySelector("main");
-
-            if (newMain && currentMain) {
-                currentMain.replaceWith(newMain);
-                document.title = doc.title;
-
-                if (pushState) {
-                    window.history.pushState({}, "", url);
-                }
-
-                window.scrollTo({ top: 0, behavior: "smooth" });
-                setupActiveNav(url);
-                syncHeaderCartCounter();
-
-                // Notify page controllers (products.html / cart.html) to initialize
-                window.dispatchEvent(new CustomEvent('anudip_cart_updated'));
-                if (window.AnudipCart && typeof window.AnudipCart.renderCartPage === 'function' && document.getElementById('cart-items-wrapper')) {
-                    window.AnudipCart.renderCartPage();
-                }
-            } else {
-                window.location.href = url;
-            }
-        } catch (err) {
-            window.location.href = url;
-        }
+        // Use native browser navigation to ensure all page scripts and stylesheets load cleanly
     }
 
     // Run on DOM Ready
