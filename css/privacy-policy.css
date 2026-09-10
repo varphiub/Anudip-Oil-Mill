@@ -16,23 +16,20 @@
 .privacy-hero {
     background: #fff0e4;
     border-bottom: 1px solid #eadfd6;
-    padding: 75px 20px 70px;
+    padding: 35px 20px 30px;
 }
 
 .privacy-hero-content {
-    width: calc(100% - 80px);
-    max-width: 1000px;
+    width: 90%;
+    max-width: 1200px;
     margin: 0 auto;
     text-align: center;
 }
 
 .privacy-label {
     display: inline-block;
-
-    margin-bottom: 15px;
-
-    color: #0d452f;
-
+    margin-bottom: 10px;
+    color: #2c694e;
     font-size: 12px;
     font-weight: 700;
     text-transform: uppercase;
@@ -40,29 +37,25 @@
 }
 
 .privacy-hero h1 {
-    margin: 0 0 18px;
-
-    color: #241a0e;
-
-    font-size: 44px;
-    line-height: 1.15;
-    font-weight: 700;
+    margin: 0 0 14px;
+    color: #012d1d;
+    font-size: 42px;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    font-weight: 800;
 }
 
 .privacy-hero p {
     max-width: 700px;
-
-    margin: 0 auto 20px;
-
-    color: #625b54;
-
-    font-size: 15px;
-    line-height: 1.8;
+    margin: 0 auto 16px;
+    color: #414844;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.7;
 }
 
 .updated-date {
-    color: #756d66;
-
+    color: #717973;
     font-size: 12px;
     font-weight: 500;
 }
@@ -73,13 +66,12 @@
 ========================================= */
 
 .privacy-content {
-    padding: 70px 20px;
+    padding: 40px 20px 50px;
 }
 
 .privacy-container {
-    width: calc(100% - 80px);
-    max-width: 900px;
-
+    width: 90%;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -91,7 +83,6 @@
 .policy-section {
     padding-bottom: 38px;
     margin-bottom: 38px;
-
     border-bottom: 1px solid #eadfd6;
 }
 
@@ -101,22 +92,19 @@
 }
 
 .policy-section h2 {
-    margin: 0 0 16px;
-
-    color: #241a0e;
-
+    margin: 0 0 14px;
+    color: #012d1d;
     font-size: 22px;
-    line-height: 1.4;
+    line-height: 1.35;
     font-weight: 700;
 }
 
 .policy-section p {
     margin: 0 0 14px;
-
-    color: #625b54;
-
+    color: #414844;
     font-size: 14px;
-    line-height: 1.9;
+    font-weight: 400;
+    line-height: 1.7;
 }
 
 .policy-section p:last-child {
@@ -135,11 +123,10 @@
 
 .policy-section li {
     margin-bottom: 9px;
-
-    color: #625b54;
-
+    color: #414844;
     font-size: 14px;
-    line-height: 1.8;
+    font-weight: 400;
+    line-height: 1.7;
 }
 
 

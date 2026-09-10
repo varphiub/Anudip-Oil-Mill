@@ -1,296 +1,299 @@
 /* =========================================
    ANUDIP OIL MILL - COMMON HEADER
+   Enforces consistent dimensions, fonts & icons across all pages
    ========================================= */
 
-.site-header {
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
+
+html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+#header {
+    min-height: 76px;
     width: 100%;
-    height: 76px;
-    background: #fff8f4;
-    border-bottom: 1px solid #eadfd6;
-    display: flex;
-    align-items: center;
-    position: relative;
-    z-index: 1000;
-}
-
-.header-container {
-    width: 100%;
-    max-width: 1200px;
-    height: 100%;
-    margin: 0 auto;
-    padding: 0 24px;
-
-    display: flex;
-    align-items: center;
-}
-
-/* =========================================
-   LOGO
-   ========================================= */
-
-.header-logo {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    flex-shrink: 0;
-}
-
-.header-logo img {
-    width: 145px;
-    height: 58px;
-    object-fit: contain;
-    object-position: left center;
     display: block;
 }
 
-/* =========================================
-   DESKTOP NAVIGATION
-   ========================================= */
-
-.header-nav {
-    display: flex;
-    align-items: center;
-    gap: 27px;
-    margin-left: auto;
-    margin-right: 25px;
+.site-header,
+.site-header * {
+    box-sizing: border-box !important;
+    font-family: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
-.header-nav a {
-    color: #241a0e;
-    text-decoration: none;
-
-    font-family: "Plus Jakarta Sans", sans-serif;
-    font-size: 14px;
-    font-weight: 600;
-
-    white-space: nowrap;
-
-    transition: color 0.2s ease;
+/* Enforce Material Icons in header */
+.site-header .material-symbols-outlined {
+    font-family: 'Material Symbols Outlined' !important;
+    font-weight: normal !important;
+    font-style: normal !important;
+    font-size: 21px !important;
+    line-height: 1 !important;
+    letter-spacing: normal !important;
+    text-transform: none !important;
+    display: inline-block !important;
+    white-space: nowrap !important;
+    word-wrap: normal !important;
+    direction: ltr !important;
+    -webkit-font-feature-settings: 'liga' !important;
+    font-feature-settings: 'liga' !important;
+    -webkit-font-smoothing: antialiased !important;
+    vertical-align: middle !important;
 }
 
-.header-nav a:hover {
-    color: #2c694e;
+.site-header {
+    width: 100% !important;
+    height: 76px !important;
+    background-color: #fff8f4 !important;
+    border-bottom: 1px solid #eadfd6 !important;
+    display: flex !important;
+    align-items: center !important;
+    position: relative !important;
+    z-index: 1000 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    top: auto !important;
+    left: auto !important;
 }
 
-/* =========================================
-   RIGHT SIDE
-   ========================================= */
-
-.header-actions {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    flex-shrink: 0;
+.site-header .header-container {
+    width: 90% !important;
+    max-width: 1200px !important;
+    height: 100% !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
 }
 
-/* =========================================
-   CART
-   ========================================= */
-
-.cart-button {
-    height: 42px;
-    padding: 0 16px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 6px;
-
-    background: #012d1d;
-    color: #ffffff;
-
-    border-radius: 24px;
-
-    text-decoration: none;
-
-    font-family: "Plus Jakarta Sans", sans-serif;
-    font-size: 13px;
-    font-weight: 700;
-
-    transition: all 0.2s ease;
+/* LOGO */
+.site-header .header-logo {
+    display: flex !important;
+    align-items: center !important;
+    text-decoration: none !important;
+    flex-shrink: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
-.cart-button:hover {
-    background: #2c694e;
-    transform: translateY(-1px);
+.site-header .header-logo img {
+    width: 145px !important;
+    height: 58px !important;
+    max-width: 145px !important;
+    max-height: 58px !important;
+    object-fit: contain !important;
+    object-position: left center !important;
+    display: block !important;
+    border: none !important;
+    border-radius: 0 !important;
+    background: transparent !important;
 }
 
-.cart-button .material-symbols-outlined {
-    font-size: 21px;
+/* DESKTOP NAVIGATION */
+.site-header .header-nav {
+    display: flex !important;
+    align-items: center !important;
+    gap: 27px !important;
+    margin-left: auto !important;
+    margin-right: 25px !important;
+    padding: 0 !important;
 }
 
-/* =========================================
-   ACCOUNT
-   ========================================= */
-
-.account-button {
-    width: 42px;
-    height: 42px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    background: #012d1d;
-    color: #ffffff;
-
-    border-radius: 50%;
-
-    text-decoration: none;
-
-    transition: all 0.2s ease;
+.site-header .header-nav a {
+    color: #241a0e !important;
+    text-decoration: none !important;
+    font-family: "Plus Jakarta Sans", sans-serif !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    white-space: nowrap !important;
+    line-height: normal !important;
+    padding: 6px 0 !important;
+    position: relative !important;
+    transition: color 0.2s ease !important;
+    background: transparent !important;
 }
 
-.account-button:hover {
-    background: #2c694e;
-    transform: translateY(-1px);
+.site-header .header-nav a:hover,
+.site-header .header-nav a.active {
+    color: #2c694e !important;
 }
 
-.account-button .material-symbols-outlined {
-    font-size: 21px;
+.site-header .header-nav a.active::after {
+    content: "" !important;
+    position: absolute !important;
+    bottom: -2px !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 2px !important;
+    background: #2c694e !important;
+    border-radius: 2px !important;
 }
 
-/* =========================================
-   MOBILE MENU BUTTON
-   ========================================= */
+/* RIGHT SIDE ACTIONS */
+.site-header .header-actions {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    flex-shrink: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
 
-.menu-toggle {
+/* CART BUTTON */
+.site-header .cart-button {
+    height: 42px !important;
+    padding: 0 16px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 6px !important;
+    background: #012d1d !important;
+    color: #ffffff !important;
+    border-radius: 24px !important;
+    text-decoration: none !important;
+    font-family: "Plus Jakarta Sans", sans-serif !important;
+    font-size: 13px !important;
+    font-weight: 700 !important;
+    line-height: normal !important;
+    border: none !important;
+    box-shadow: none !important;
+    transition: all 0.2s ease !important;
+    cursor: pointer !important;
+}
+
+.site-header .cart-button:hover {
+    background: #2c694e !important;
+    transform: translateY(-1px) !important;
+}
+
+.site-header #cartCounter {
+    font-size: 13px !important;
+    font-weight: 700 !important;
+    color: #ffffff !important;
+}
+
+/* ACCOUNT BUTTON */
+.site-header .account-button {
+    width: 42px !important;
+    height: 42px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: #012d1d !important;
+    color: #ffffff !important;
+    border-radius: 50% !important;
+    text-decoration: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    transition: all 0.2s ease !important;
+    cursor: pointer !important;
+}
+
+.site-header .account-button:hover {
+    background: #2c694e !important;
+    transform: translateY(-1px) !important;
+}
+
+/* MOBILE TOGGLE */
+.site-header .menu-toggle {
+    display: none !important;
+    width: 42px !important;
+    height: 42px !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: transparent !important;
+    color: #012d1d !important;
+    border: none !important;
+    cursor: pointer !important;
+    padding: 0 !important;
+}
+
+.site-header .menu-toggle .material-symbols-outlined {
+    font-size: 27px !important;
+}
+
+/* MOBILE DRAWER */
+.site-header .mobile-drawer {
     display: none;
-
-    width: 42px;
-    height: 42px;
-
-    align-items: center;
-    justify-content: center;
-
-    background: transparent;
-    color: #012d1d;
-
-    border: none;
-    cursor: pointer;
 }
 
-.menu-toggle .material-symbols-outlined {
-    font-size: 27px;
-}
-
-/* =========================================
-   MOBILE DRAWER
-   IMPORTANT: HIDDEN ON DESKTOP
-   ========================================= */
-
-.mobile-drawer {
-    display: none;
-}
-
-
-/* =========================================
-   TABLET
-   ========================================= */
-
+/* TABLET */
 @media (max-width: 1100px) {
-
-    .header-nav {
-        gap: 18px;
-        margin-right: 15px;
+    .site-header .header-nav {
+        gap: 18px !important;
+        margin-right: 15px !important;
     }
-
-    .header-nav a {
-        font-size: 13px;
+    .site-header .header-nav a {
+        font-size: 13px !important;
     }
-
-    .header-logo img {
-        width: 130px;
+    .site-header .header-logo img {
+        width: 130px !important;
     }
 }
 
-
-/* =========================================
-   MOBILE
-   ========================================= */
-
+/* MOBILE */
 @media (max-width: 900px) {
-
     .site-header {
-        height: 68px;
+        height: 68px !important;
     }
-
-    .header-container {
-        padding: 0 18px;
+    .site-header .header-container {
+        padding: 0 18px !important;
     }
-
-    .header-logo img {
-        width: 130px;
-        height: 52px;
+    .site-header .header-logo img {
+        width: 130px !important;
+        height: 52px !important;
     }
-
-    /* Hide desktop navigation */
-    .header-nav {
-        display: none;
+    .site-header .header-nav {
+        display: none !important;
     }
-
-    /* Show mobile menu button */
-    .menu-toggle {
-        display: flex;
+    .site-header .menu-toggle {
+        display: inline-flex !important;
     }
-
-    .header-actions {
-        margin-left: auto;
-        gap: 7px;
+    .site-header .header-actions {
+        margin-left: auto !important;
+        gap: 7px !important;
     }
-
-    .cart-button {
-        height: 40px;
-        padding: 0 13px;
+    .site-header .cart-button {
+        height: 40px !important;
+        padding: 0 13px !important;
     }
-
-    .account-button {
-        width: 40px;
-        height: 40px;
+    .site-header .account-button {
+        width: 40px !important;
+        height: 40px !important;
     }
-
-    /* Mobile drawer */
-    .mobile-drawer {
-        position: absolute;
-        top: 68px;
-        left: 0;
-        width: 100%;
-
-        background: #fff8f4;
-
-        border-top: 1px solid #eadfd6;
-        border-bottom: 1px solid #eadfd6;
-
-        padding: 15px 20px;
-
-        flex-direction: column;
-        gap: 5px;
-
-        box-shadow: 0 8px 20px rgba(36, 26, 14, 0.08);
+    .site-header .mobile-drawer {
+        position: absolute !important;
+        top: 68px !important;
+        left: 0 !important;
+        width: 100% !important;
+        background: #fff8f4 !important;
+        border-top: 1px solid #eadfd6 !important;
+        border-bottom: 1px solid #eadfd6 !important;
+        padding: 15px 20px !important;
+        flex-direction: column !important;
+        gap: 5px !important;
+        box-shadow: 0 8px 20px rgba(36, 26, 14, 0.08) !important;
+        z-index: 1001 !important;
     }
-
-    .mobile-drawer a {
-        display: block;
-
-        padding: 13px 10px;
-
-        color: #241a0e;
-        text-decoration: none;
-
-        font-family: "Plus Jakarta Sans", sans-serif;
-        font-size: 15px;
-        font-weight: 600;
-
-        border-radius: 8px;
+    .site-header .mobile-drawer a {
+        display: block !important;
+        padding: 13px 10px !important;
+        color: #241a0e !important;
+        text-decoration: none !important;
+        font-family: "Plus Jakarta Sans", sans-serif !important;
+        font-size: 15px !important;
+        font-weight: 600 !important;
+        border-radius: 8px !important;
     }
-
-    .mobile-drawer a:hover {
-        background: #ffead8;
-        color: #2c694e;
+    .site-header .mobile-drawer a:hover,
+    .site-header .mobile-drawer a.active {
+        background: #ffead8 !important;
+        color: #2c694e !important;
     }
-
-    /* JS can add this class when menu opens */
-    .mobile-drawer.active {
-        display: flex;
+    .site-header .mobile-drawer.active {
+        display: flex !important;
     }
 }

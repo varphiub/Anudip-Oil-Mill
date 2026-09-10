@@ -60,6 +60,7 @@ button, input {
 .z-50 { z-index: 50; }
 
 .w-full { width: 100%; }
+.w-\[90\%\] { width: 90%; }
 .h-full { height: 100%; }
 .h-20 { height: 5rem; }
 .h-8 { height: 2rem; }
@@ -80,8 +81,14 @@ button, input {
 .mx-auto { margin-left: auto; margin-right: auto; }
 .mt-space-3xl { margin-top: 4.5rem; }
 .mt-space-2xs { margin-top: .25rem; }
-.mt-space-xs { margin-top: .5rem; }
+.pt-4 { padding-top: 1rem; }
+.pt-6 { padding-top: 1.5rem; }
+.pt-8 { padding-top: 2rem; }
+.pt-10 { padding-top: 2.5rem; }
+.pt-12 { padding-top: 3rem; }
+.pt-16 { padding-top: 4rem; }
 .pt-20 { padding-top: 5rem; }
+.pb-12 { padding-bottom: 3rem; }
 .pt-space-xs { padding-top: .5rem; }
 .pt-space-2xs { padding-top: .25rem; }
 .pt-space-md { padding-top: 1rem; }
@@ -156,14 +163,14 @@ button, input {
 .text-error { color: var(--error); }
 
 /* ---------- Typography ---------- */
-.font-body-sm { font-size: 14px; line-height: 20px; font-weight: 400; }
-.font-body-md { font-size: 16px; line-height: 24px; font-weight: 400; }
-.font-label-sm { font-size: 11px; line-height: 14px; letter-spacing: .04em; font-weight: 700; }
-.font-label-md { font-size: 12px; line-height: 16px; letter-spacing: .03em; font-weight: 600; }
-.font-label-lg { font-size: 14px; line-height: 20px; letter-spacing: .02em; font-weight: 600; }
-.font-headline-sm { font-size: 20px; line-height: 28px; font-weight: 600; }
-.font-headline-md { font-size: 24px; line-height: 32px; font-weight: 700; }
-.font-headline-lg { font-size: 36px; line-height: 44px; letter-spacing: -.015em; font-weight: 700; }
+.font-body-sm { font-size: 14px; line-height: 1.7; font-weight: 400; }
+.font-body-md { font-size: 16px; line-height: 1.7; font-weight: 400; }
+.font-label-sm { font-size: 12px; line-height: 1.5; letter-spacing: 1.5px; font-weight: 700; }
+.font-label-md { font-size: 12px; line-height: 1.5; letter-spacing: 1px; font-weight: 700; }
+.font-label-lg { font-size: 14px; line-height: 1.5; font-weight: 700; }
+.font-headline-sm { font-size: 18px; line-height: 1.4; font-weight: 700; }
+.font-headline-md { font-size: 32px; line-height: 1.25; letter-spacing: -0.01em; font-weight: 800; }
+.font-headline-lg { font-size: 42px; line-height: 1.2; letter-spacing: -0.02em; font-weight: 800; }
 
 /* ---------- Borders / Radius / Shadows ---------- */
 .rounded-lg { border-radius: .5rem; }
@@ -195,15 +202,6 @@ button, input {
 .focus\:ring-2:focus { box-shadow: 0 0 0 2px var(--secondary); }
 
 /* ---------- Components ---------- */
-header {
-  box-shadow: 0 2px 8px -1px rgba(43,32,20,.05);
-}
-
-header .max-w-\[75rem\],
-footer .max-w-\[75rem\] {
-  width: 100%;
-}
-
 main {
   width: 100%;
 }
@@ -237,10 +235,6 @@ button {
   50% { opacity: .5; }
 }
 
-footer {
-  background: var(--surface-low);
-}
-
 /* Material Symbols */
 .material-symbols-outlined {
   font-family: "Material Symbols Outlined";
@@ -255,6 +249,7 @@ footer {
   word-wrap: normal;
   direction: ltr;
   -webkit-font-feature-settings: "liga";
+  font-feature-settings: "liga";
   -webkit-font-smoothing: antialiased;
 }
 
@@ -346,14 +341,14 @@ footer {
 
 .self-start { align-self: flex-start; }
 
-.text-body-sm { font-size: 14px; line-height: 20px; }
-.text-body-md { font-size: 16px; line-height: 24px; }
-.text-label-sm { font-size: 11px; line-height: 14px; letter-spacing: .04em; }
-.text-label-md { font-size: 12px; line-height: 16px; letter-spacing: .03em; }
-.text-label-lg { font-size: 14px; line-height: 20px; letter-spacing: .02em; }
-.text-headline-sm { font-size: 20px; line-height: 28px; }
-.text-headline-md { font-size: 24px; line-height: 32px; }
-.text-headline-lg { font-size: 36px; line-height: 44px; }
+.text-body-sm { font-size: 14px; line-height: 1.7; }
+.text-body-md { font-size: 16px; line-height: 1.7; }
+.text-label-sm { font-size: 12px; line-height: 1.5; letter-spacing: 1.5px; }
+.text-label-md { font-size: 12px; line-height: 1.5; letter-spacing: 1px; }
+.text-label-lg { font-size: 14px; line-height: 1.5; }
+.text-headline-sm { font-size: 18px; line-height: 1.4; }
+.text-headline-md { font-size: 32px; line-height: 1.25; letter-spacing: -0.01em; }
+.text-headline-lg { font-size: 42px; line-height: 1.2; letter-spacing: -0.02em; }
 
 .max-w-sm { max-width: 24rem; }
 

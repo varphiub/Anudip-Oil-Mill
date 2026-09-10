@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Anudip Oil Mill</title>
+    <meta name="description" content="Get in touch with Anudip Oil Mill for fresh wood-pressed oils, inquiries, bulk orders, and customer support.">
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+
+    <!-- Component CSS -->
+    <link rel="stylesheet" href="../components/header.css">
+    <link rel="stylesheet" href="../components/footer.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/contacts.css">
+</head>
+
+<body>
+
+    <!-- Reusable Header -->
+    <div id="header"></div>
+
+    <main>
+        <!-- Hero -->
+        <section class="contact-hero">
+            <div class="container">
+                <span class="contact-badge">
+                    <span class="material-symbols-outlined" style="font-size:16px;">support_agent</span>
+                    We're Here For You
+                </span>
+                <h1>Get In Touch With Us</h1>
+                <p>Have questions about our wooden chekku cold-pressed oils, bulk orders, or lab test certificates? Reach out to us anytime.</p>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-grid">
+
+                    <!-- Contact Details -->
+                    <div class="contact-info-list">
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <span class="material-symbols-outlined">location_on</span>
+                            </div>
+                            <div class="info-text">
+                                <h3>Mill & Store Location</h3>
+                                <p>Anudip Oil Mill, Traditional Cold Press Unit<br>Bengaluru, Karnataka, India - 560001</p>
+                            </div>
+                        </div>
+
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <span class="material-symbols-outlined">call</span>
+                            </div>
+                            <div class="info-text">
+                                <h3>Phone & WhatsApp</h3>
+                                <p><a href="tel:+919876543210">+91 98765 43210</a><br><a href="https://wa.me/919876543210" target="_blank">Chat on WhatsApp</a></p>
+                            </div>
+                        </div>
+
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <span class="material-symbols-outlined">mail</span>
+                            </div>
+                            <div class="info-text">
+                                <h3>Email Inquiries</h3>
+                                <p><a href="mailto:info@anudipoilmill.com">info@anudipoilmill.com</a><br><a href="mailto:orders@anudipoilmill.com">orders@anudipoilmill.com</a></p>
+                            </div>
+                        </div>
+
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <span class="material-symbols-outlined">schedule</span>
+                            </div>
+                            <div class="info-text">
+                                <h3>Mill Working Hours</h3>
+                                <p>Monday – Saturday: 8:00 AM – 8:00 PM<br>Sunday: 9:00 AM – 2:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="contact-form-card">
+                        <h2>Send a Message</h2>
+                        <p>Fill out the form below and our team will get back to you within 24 hours.</p>
+
+                        <form id="contactForm" onsubmit="event.preventDefault(); alert('Thank you for reaching out! We will contact you shortly.');">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="name">Your Name *</label>
+                                    <input type="text" id="name" placeholder="Full name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Phone Number *</label>
+                                    <input type="tel" id="phone" placeholder="+91 XXXXX XXXXX" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" placeholder="name@example.com">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject">Subject / Purpose</label>
+                                <select id="subject">
+                                    <option value="general">General Inquiry</option>
+                                    <option value="bulk">Bulk / Wholesale Order</option>
+                                    <option value="lab">Lab Reports / Quality Query</option>
+                                    <option value="delivery">Delivery Status</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Your Message *</label>
+                                <textarea id="message" rows="4" placeholder="How can we assist you today?" required></textarea>
+                            </div>
+
+                            <button type="submit" class="submit-btn">
+                                <span>Send Message</span>
+                                <span class="material-symbols-outlined">send</span>
+                            </button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Reusable Footer -->
+    <div id="footer"></div>
+
+    <!-- Components Script -->
+    <script src="../components/components.js"></script>
+</body>
+
+</html>
