@@ -12,10 +12,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
     
-    <!-- Component CSS -->
+    <!-- Component & Common CSS -->
     <link rel="stylesheet" href="../components/header.css">
     <link rel="stylesheet" href="../components/footer.css">
-    
+    <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/about.css">
 </head>
 <body>
@@ -60,7 +60,7 @@
             <div class="container heritage-container">
                 <div class="heritage-image-wrapper">
                     <figure class="heritage-figure">
-                        <img src="https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?auto=format&fit=crop&w=1200&q=80" alt="Artisanal Mara Chekku Wooden Oil Press" class="heritage-img">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAiboR17kbJY7tE4Zm4K3RX6F1o6lr4LUffsx6Np_V2EcgPkRp_FviuHn1CiDf6KyggpOnS5Xohqby2DFen5JsPrxEd8oP2QFnTKCf9L03lS1totsVlMjhtjNXcxaXQCUPWqjvbMSNvN10ow3H8fmflvwwTQ1EKxHNnf1MePjA3ZO5zVY1QDf0bFhXyOzv8dxCFzLAgom34IQC56foddUGpYbEcdUuBg8Vbeyb-DcTb3I7UyJ_FJ3t" alt="Artisanal Mara Chekku Wooden Oil Press" class="heritage-img">
                         <figcaption class="image-overlay-badge">
                             <div class="overlay-pill">
                                 <span class="pill-icon">🌱</span>
@@ -129,89 +129,52 @@
             <div class="container">
                 <div class="values-header">
                     <div>
-                        <span class="section-label">OUR FOUNDATION</span>
-                        <h2 class="section-title">What Defines Us</h2>
+                        <span class="section-label">PILLARS OF INTEGRITY</span>
+                        <h2 class="section-title">Our Core Values</h2>
                     </div>
-                    <p class="values-header-desc">Uncompromising standards at every step of seed selection, pressing, settling, and eco-friendly distribution.</p>
+                    <p class="values-header-desc">Every batch pressed at Anudip is governed by unyielding commitments to seed integrity, community stewardship, and customer wellness.</p>
                 </div>
 
                 <div class="values-grid">
                     <div class="value-card">
-                        <div class="value-icon">🪵</div>
-                        <h3 class="value-title">Vaagai Wood Press</h3>
-                        <p class="value-desc">Natural timber absorbs excess friction heat, maintaining oil purity and zero metal contamination.</p>
-                        <span class="value-tag">Mara Chekku Method</span>
+                        <div class="value-icon-box">
+                            <span class="material-symbols-outlined">search</span>
+                        </div>
+                        <h3 class="value-title">Quality</h3>
+                        <p class="value-desc">Hand-screened seeds with zero compromises. Only mature, thoroughly cleaned, and defect-free seeds enter our mill.</p>
                     </div>
 
                     <div class="value-card">
-                        <div class="value-icon">🚫</div>
-                        <h3 class="value-title">Zero Chemicals</h3>
-                        <p class="value-desc">Free from hexanes, artificial bleaching agents, synthetic de-odourisers, and anti-foaming additives.</p>
-                        <span class="value-tag">Raw &amp; Unrefined</span>
+                        <div class="value-icon-box">
+                            <span class="material-symbols-outlined">water_drop</span>
+                        </div>
+                        <h3 class="value-title">Purity</h3>
+                        <p class="value-desc">100% virgin cold extraction without chemicals, paraffin, artificial preservatives, or mineral oil dilution.</p>
                     </div>
 
                     <div class="value-card">
-                        <div class="value-icon">🌾</div>
-                        <h3 class="value-title">Farm Traceability</h3>
-                        <p class="value-desc">Direct seed sourcing from verified regional organic farms with stringent quality testing.</p>
-                        <span class="value-tag">Direct Farm Connection</span>
+                        <div class="value-icon-box">
+                            <span class="material-symbols-outlined">door_open</span>
+                        </div>
+                        <h3 class="value-title">Trust</h3>
+                        <p class="value-desc">Complete batch traceability from farm to bottle, paired with an open-door policy for community mill inspection visits.</p>
                     </div>
 
                     <div class="value-card">
-                        <div class="value-icon">☀️</div>
-                        <h3 class="value-title">Sun-Dried Filtration</h3>
-                        <p class="value-desc">Natural cotton mesh filtration and sun-settling instead of high-speed machine centrifugation.</p>
-                        <span class="value-tag">Natural Sedimentation</span>
+                        <div class="value-icon-box">
+                            <span class="material-symbols-outlined">recycling</span>
+                        </div>
+                        <h3 class="value-title">Sustainability</h3>
+                        <p class="value-desc">Zero-waste seed cake repurposed for nutrient-dense local cattle feed and distributed in recyclable food-grade tin canisters.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Thermal Temperature Limit Widget Section -->
-        <section class="thermal-section">
-            <div class="container">
-                <div class="thermal-card">
-                    <div class="thermal-info">
-                        <div class="thermal-icon-wrapper">🌡️</div>
-                        <div>
-                            <h4 class="thermal-title">Live Thermal Extraction Limit</h4>
-                            <p class="thermal-desc">Our slow churning never exceeds 42°C, safeguarding live micronutrients &amp; polyphenols.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="thermal-gauge-wrapper">
-                        <div class="gauge-bar">
-                            <div class="gauge-fill" style="width: 35%;"></div>
-                        </div>
-                        <div class="gauge-labels">
-                            <span>Room Temp (25°C)</span>
-                            <span class="active-temp">Our Press (38–41°C)</span>
-                            <span class="danger-temp">Industrial (&gt;200°C)</span>
-                        </div>
-                        <div class="gauge-sub">Standard Cold Press Threshold: &lt;45°C</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Quote Banner Section -->
-        <section class="quote-banner">
-            <div class="container quote-container">
-                <div class="quote-content">
-                    <span class="quote-badge">ORGANIC FOOD PLEDGE</span>
-                    <blockquote class="quote-text">“Quality begins with what we choose.”</blockquote>
-                    <div class="quote-author">— Founders, <strong>Anudip Oil Mill</strong></div>
-                </div>
-                <a href="../html/products.html" class="quote-cta-btn">
-                    <span>Explore Cold-Pressed Oils</span>
-                    <span class="btn-arrow">→</span>
-                </a>
-            </div>
-        </section>
     </main>
     <!-- COMMON FOOTER -->
     <div id="footer"></div>
     <script src="../components/components.js"></script>
-
+    <script src="../js/about.js"></script>
 </body>
 </html>

@@ -1,26 +1,26 @@
-/* Design System & Variables */
+/* Design System & Variables (Harmonized with Common Design System) */
 :root {
-    --bg-page: #FAF7F2;
-    --bg-card: #FFFFFF;
-    --bg-card-alt: #F3EFEA;
-    --bg-accent-green: #0A3225;
-    --bg-badge: #EFE4D6;
-    --border-color: #E2DACD;
-    --border-dark: #D4C9BA;
-    --text-primary: #1C241B;
-    --text-secondary: #5C635B;
-    --text-muted: #889087;
-    --accent-green: #2B6E49;
-    --accent-gold: #C89539;
-    --accent-amber: #D97706;
+    --bg-page: var(--background, #fff8f4);
+    --bg-card: var(--surface, #ffffff);
+    --bg-card-alt: var(--surface-light, #fff1e6);
+    --bg-accent-green: var(--primary, #012d1d);
+    --bg-badge: var(--surface-medium, #ffead8);
+    --border-color: var(--border, #eadfd6);
+    --border-dark: #d5c8bb;
+    --text-primary: var(--primary, #012d1d);
+    --text-secondary: var(--text-main, #241a0e);
+    --text-muted: var(--text-muted, #414844);
+    --accent-green: var(--secondary, #2c694e);
+    --accent-gold: var(--accent, #e9c46a);
+    --accent-amber: #d97706;
 
     --font-heading: 'Plus Jakarta Sans', sans-serif;
     --font-serif-title: 'Plus Jakarta Sans', sans-serif;
     --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 
-    --shadow-sm: 0 2px 8px rgba(28, 36, 27, 0.04);
-    --shadow-md: 0 6px 24px rgba(28, 36, 27, 0.06);
-    --shadow-lg: 0 12px 32px rgba(28, 36, 27, 0.1);
+    --shadow-sm: 0 2px 8px rgba(1, 45, 29, 0.04);
+    --shadow-md: 0 6px 24px rgba(1, 45, 29, 0.06);
+    --shadow-lg: 0 12px 32px rgba(1, 45, 29, 0.1);
     --radius-sm: 8px;
     --radius-md: 16px;
     --radius-lg: 24px;
@@ -551,6 +551,23 @@ body {
     margin-bottom: 16px;
 }
 
+.value-icon-box {
+    width: 44px;
+    height: 44px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.value-icon-box .material-symbols-outlined {
+    font-size: 22px;
+    color: #012d1d;
+}
+
 .value-title {
     font-family: var(--font-heading);
     font-size: 18px;
@@ -843,3 +860,208 @@ body {
         margin-bottom: 4px;
     }
 }
+
+/* ==========================================================================
+   About Page Custom Animations & Transitions (Strictly for About Page)
+   ========================================================================== */
+
+@keyframes aboutFadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes aboutFadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes aboutBadgeFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+@keyframes aboutGlowPulse {
+    0%, 100% {
+        box-shadow: 0 4px 20px rgba(44, 105, 78, 0.12);
+    }
+    50% {
+        box-shadow: 0 8px 30px rgba(44, 105, 78, 0.25);
+    }
+}
+
+.hero-badge {
+    animation: aboutBadgeFloat 4s ease-in-out infinite, aboutFadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.hero-title {
+    animation: aboutFadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both;
+}
+
+.hero-subtitle {
+    animation: aboutFadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both;
+}
+
+.stats-grid .stat-card {
+    opacity: 0;
+    animation: aboutFadeInScale 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.stats-grid .stat-card:nth-child(1) { animation-delay: 0.3s; }
+.stats-grid .stat-card:nth-child(2) { animation-delay: 0.4s; }
+.stats-grid .stat-card:nth-child(3) { animation-delay: 0.5s; }
+.stats-grid .stat-card:nth-child(4) { animation-delay: 0.6s; }
+
+.stats-grid .stat-card:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 12px 24px rgba(1, 45, 29, 0.1);
+    border-color: #2c694e;
+}
+
+.heritage-figure {
+    overflow: hidden;
+    border-radius: 16px;
+}
+
+.heritage-img {
+    transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.heritage-figure:hover .heritage-img {
+    transform: scale(1.05);
+}
+
+.overlay-pill {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    animation: aboutGlowPulse 4s ease-in-out infinite;
+}
+
+.heritage-figure:hover .overlay-pill {
+    transform: translateY(-4px);
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(35px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.value-card {
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease, border-color 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.value-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #2c694e, #F59E0B);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.value-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 32px rgba(1, 45, 29, 0.08);
+    border-color: rgba(44, 105, 78, 0.3);
+}
+
+.value-card:hover::before {
+    opacity: 1;
+}
+
+.value-icon-box {
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.3s ease, color 0.3s ease;
+}
+
+.value-card:hover .value-icon-box {
+    transform: rotate(8deg) scale(1.12);
+    background-color: #012d1d;
+}
+
+.value-card:hover .value-icon-box .material-symbols-outlined {
+    color: #FCD34D;
+}
+
+.principle-card {
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease, border-color 0.4s ease;
+}
+
+.principle-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 36px rgba(1, 45, 29, 0.1);
+    border-color: #2c694e;
+}
+
+.principle-card .icon-circle {
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.principle-card:hover .icon-circle {
+    transform: scale(1.15) rotate(-5deg);
+}
+
+.quote-banner {
+    position: relative;
+    overflow: hidden;
+}
+
+.quote-banner::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 60%);
+    pointer-events: none;
+    animation: aboutBannerShimmer 12s infinite linear;
+}
+
+@keyframes aboutBannerShimmer {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.quote-cta-btn {
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.quote-cta-btn:hover {
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.quote-cta-btn .btn-arrow {
+    transition: transform 0.3s ease;
+}
+
+.quote-cta-btn:hover .btn-arrow {
+    transform: translateX(5px);
+}
