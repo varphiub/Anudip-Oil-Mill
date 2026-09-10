@@ -68,7 +68,7 @@ const AnudipCart = (function () {
                 badge: product.badge || 'Cold Pressed',
                 meta: product.meta || '1 Litre Bottle',
                 price: Number(product.price) || 0,
-                image: product.image || '../public/images/groundnut_oil.jpg',
+                image: product.image || '../public/products/groundnut_oil.jpg',
                 qty: Number(product.qty) || 1
             });
         }

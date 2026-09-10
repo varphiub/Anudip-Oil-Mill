@@ -58,7 +58,7 @@
 
             const badge = badgeEl ? badgeEl.textContent.trim() : "Cold Pressed";
             const meta = metaEl ? metaEl.textContent.trim() : "1 Litre Bottle";
-            const image = imgEl ? imgEl.getAttribute("src") : "../public/images/groundnut_oil.jpg";
+            const image = imgEl ? imgEl.getAttribute("src") : "../public/products/groundnut_oil.jpg";
 
             return { id, name, price, badge, meta, image };
         }
