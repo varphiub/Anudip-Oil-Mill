@@ -8,13 +8,9 @@
 ========================================= */
 
 .gallery-intro {
-
     padding-top: 65px;
-
     padding-bottom: 55px;
-
-    background-color: var(--surface-light);
-
+    background: linear-gradient(180deg, #fff1e6 0%, #fff8f4 100%);
 }
 
 

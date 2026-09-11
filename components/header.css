@@ -1,7 +1,7 @@
-/* =========================================
-   ANUDIP OIL MILL - COMMON HEADER
-   Enforces consistent dimensions, fonts & icons across all pages
-   ========================================= */
+/* ==========================================================================
+   ANUDIP OIL MILL - COMMON FLOATING PILL HEADER & BACK TO TOP
+   Fixed, Rounded Edges with Scrolled Elevation & Responsive Design
+   ========================================================================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
@@ -11,10 +11,64 @@ html, body {
     padding: 0 !important;
 }
 
+/* Remove static spacer so hero background flows seamlessly to the top of the viewport */
 #header {
-    min-height: 76px;
-    width: 100%;
-    display: block;
+    display: contents !important;
+    min-height: 0 !important;
+    height: 0 !important;
+}
+
+/* Reset main wrapper so it does not add an unintended blank patch */
+main,
+body > main {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+}
+
+/* Apply top clearance and smooth background transition (top #fff1e6 -> bottom #fff8f4) to all page hero sections */
+.home-hero,
+.intro,
+.hero,
+.hero-section,
+.product-intro,
+.products-hero,
+.quality-hero,
+.gallery-intro,
+.contact-hero,
+.about-hero,
+.legal-hero,
+.privacy-hero,
+.terms-hero,
+.lab-reports-hero,
+.cart-main,
+body > section:first-of-type,
+main > section:first-of-type,
+main > div:first-of-type {
+    padding-top: 110px !important;
+    background: linear-gradient(180deg, #fff1e6 0%, #fff8f4 100%) !important;
+}
+
+@media (max-width: 960px) {
+    .home-hero,
+    .intro,
+    .hero,
+    .hero-section,
+    .product-intro,
+    .products-hero,
+    .quality-hero,
+    .gallery-intro,
+    .contact-hero,
+    .about-hero,
+    .legal-hero,
+    .privacy-hero,
+    .terms-hero,
+    .lab-reports-hero,
+    .cart-main,
+    body > section:first-of-type,
+    main > section:first-of-type,
+    main > div:first-of-type {
+        padding-top: 92px !important;
+    }
 }
 
 .site-header,
@@ -23,12 +77,13 @@ html, body {
     font-family: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
-/* Enforce Material Icons in header */
-.site-header .material-symbols-outlined {
+/* Material Icons in Header */
+.site-header .material-symbols-outlined,
+.back-to-top-btn .material-symbols-outlined {
     font-family: 'Material Symbols Outlined' !important;
     font-weight: normal !important;
     font-style: normal !important;
-    font-size: 21px !important;
+    font-size: 20px !important;
     line-height: 1 !important;
     letter-spacing: normal !important;
     text-transform: none !important;
@@ -42,20 +97,33 @@ html, body {
     vertical-align: middle !important;
 }
 
+/* ==========================================================================
+   FIXED ADAPTIVE HEADER
+   Top of page (Stay mode): Transparent & aligned with standard container (90%, max 1200px)
+   Scrolled mode: Transforms into floating pill with rounded edges, backdrop blur & elevation
+   ========================================================================== */
 .site-header {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    margin: 0 auto !important;
     width: 100% !important;
-    height: 76px !important;
-    background-color: #fff8f4 !important;
-    border-bottom: 1px solid #eadfd6 !important;
+    max-width: 100% !important;
+    height: 72px !important;
+    background: transparent !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    border: none !important;
+    border-bottom: none !important;
+    border-radius: 0px !important;
+    box-shadow: none !important;
+    z-index: 1000 !important;
     display: flex !important;
     align-items: center !important;
-    position: relative !important;
-    z-index: 1000 !important;
-    margin: 0 !important;
+    justify-content: center !important;
     padding: 0 !important;
-    box-shadow: none !important;
-    top: auto !important;
-    left: auto !important;
+    transition: all 0.35s cubic-bezier(0.2, 0.8, 0.2, 1) !important;
 }
 
 .site-header .header-container {
@@ -67,37 +135,70 @@ html, body {
     display: flex !important;
     align-items: center !important;
     justify-content: space-between !important;
+    gap: 16px !important;
+    transition: all 0.35s cubic-bezier(0.2, 0.8, 0.2, 1) !important;
 }
 
-/* LOGO */
+/* Scrolled Active State: Floating Pill with Rounded Edges */
+.site-header.is-scrolled {
+    top: 10px !important;
+    width: 92% !important;
+    max-width: 1200px !important;
+    height: 62px !important;
+    border-radius: 9999px !important;
+    background: rgba(255, 248, 244, 0.94) !important;
+    backdrop-filter: blur(16px) !important;
+    -webkit-backdrop-filter: blur(16px) !important;
+    border: 1px solid rgba(234, 223, 214, 0.9) !important;
+    box-shadow: 0 10px 30px rgba(1, 45, 29, 0.12), 0 2px 6px rgba(0, 0, 0, 0.04) !important;
+    padding: 0 20px !important;
+}
+
+.site-header.is-scrolled .header-container {
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+/* ==========================================================================
+   BRAND GROUP
+   ========================================================================== */
+.site-header .header-brand-group {
+    display: flex !important;
+    align-items: center !important;
+    flex-shrink: 0 !important;
+}
+
 .site-header .header-logo {
     display: flex !important;
     align-items: center !important;
     text-decoration: none !important;
     flex-shrink: 0 !important;
-    margin: 0 !important;
-    padding: 0 !important;
 }
 
 .site-header .header-logo img {
-    width: 145px !important;
-    height: 58px !important;
+    height: 44px !important;
+    width: auto !important;
     max-width: 145px !important;
-    max-height: 58px !important;
     object-fit: contain !important;
     object-position: left center !important;
     display: block !important;
     border: none !important;
-    border-radius: 0 !important;
     background: transparent !important;
+    transition: height 0.3s ease !important;
 }
 
-/* DESKTOP NAVIGATION */
+.site-header.is-scrolled .header-logo img {
+    height: 38px !important;
+}
+
+/* ==========================================================================
+   DESKTOP NAVIGATION
+   ========================================================================== */
 .site-header .header-nav {
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    gap: 28px !important;
+    gap: 24px !important;
     margin: 0 auto !important;
     padding: 0 !important;
 }
@@ -127,81 +228,69 @@ html, body {
     bottom: -2px !important;
     left: 0 !important;
     width: 100% !important;
-    height: 2px !important;
+    height: 2.5px !important;
     background: #2c694e !important;
     border-radius: 2px !important;
 }
 
-/* RIGHT SIDE ACTIONS */
+/* ==========================================================================
+   RIGHT SIDE ACTIONS (CART & MOBILE TOGGLE)
+   ========================================================================== */
 .site-header .header-actions {
     display: flex !important;
     align-items: center !important;
     gap: 10px !important;
     flex-shrink: 0 !important;
-    margin: 0 !important;
-    padding: 0 !important;
 }
 
-/* CART BUTTON */
+/* Cart Button */
 .site-header .cart-button {
-    height: 42px !important;
-    padding: 0 16px !important;
+    height: 40px !important;
+    padding: 0 18px !important;
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
-    gap: 6px !important;
+    gap: 7px !important;
     background: #012d1d !important;
     color: #ffffff !important;
-    border-radius: 24px !important;
+    border-radius: 9999px !important;
     text-decoration: none !important;
     font-family: "Plus Jakarta Sans", sans-serif !important;
-    font-size: 13px !important;
+    font-size: 13.5px !important;
     font-weight: 700 !important;
     line-height: normal !important;
     border: none !important;
-    box-shadow: none !important;
+    box-shadow: 0 2px 8px rgba(1, 45, 29, 0.15) !important;
     transition: all 0.2s ease !important;
     cursor: pointer !important;
+    white-space: nowrap !important;
 }
 
 .site-header .cart-button:hover {
     background: #2c694e !important;
     transform: translateY(-1px) !important;
+    box-shadow: 0 4px 12px rgba(1, 45, 29, 0.25) !important;
 }
 
 .site-header #cartCounter {
-    font-size: 13px !important;
-    font-weight: 700 !important;
-    color: #ffffff !important;
-}
-
-/* ACCOUNT BUTTON */
-.site-header .account-button {
-    width: 42px !important;
-    height: 42px !important;
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
-    background: #012d1d !important;
-    color: #ffffff !important;
-    border-radius: 50% !important;
-    text-decoration: none !important;
-    border: none !important;
-    box-shadow: none !important;
-    transition: all 0.2s ease !important;
-    cursor: pointer !important;
-}
-
-.site-header .account-button:hover {
+    min-width: 20px !important;
+    height: 20px !important;
+    padding: 0 5px !important;
     background: #2c694e !important;
-    transform: translateY(-1px) !important;
+    color: #ffffff !important;
+    border-radius: 10px !important;
+    font-size: 11px !important;
+    font-weight: 800 !important;
 }
 
-/* MOBILE TOGGLE */
+/* Mobile Toggle */
 .site-header .menu-toggle {
     display: none !important;
-    width: 42px !important;
-    height: 42px !important;
+    width: 40px !important;
+    height: 40px !important;
     align-items: center !important;
     justify-content: center !important;
     background: transparent !important;
@@ -209,43 +298,96 @@ html, body {
     border: none !important;
     cursor: pointer !important;
     padding: 0 !important;
+    border-radius: 50% !important;
+}
+
+.site-header .menu-toggle:hover {
+    background: rgba(44, 105, 78, 0.08) !important;
 }
 
 .site-header .menu-toggle .material-symbols-outlined {
-    font-size: 27px !important;
+    font-size: 26px !important;
 }
 
-/* MOBILE DRAWER */
+/* ==========================================================================
+   MOBILE DRAWER
+   ========================================================================== */
 .site-header .mobile-drawer {
     display: none;
 }
 
-/* TABLET */
-@media (max-width: 1100px) {
+/* ==========================================================================
+   FLOATING BACK TO TOP BUTTON
+   ========================================================================== */
+.back-to-top-btn {
+    position: fixed !important;
+    bottom: 28px !important;
+    right: 28px !important;
+    width: 48px !important;
+    height: 48px !important;
+    border-radius: 50% !important;
+    background: #012d1d !important;
+    color: #ffffff !important;
+    border: 2px solid rgba(255, 255, 255, 0.25) !important;
+    box-shadow: 0 6px 20px rgba(1, 45, 29, 0.3) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    cursor: pointer !important;
+    z-index: 999 !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    transform: translateY(18px) scale(0.9) !important;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+}
+
+.back-to-top-btn.is-visible {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateY(0) scale(1) !important;
+}
+
+.back-to-top-btn:hover {
+    background: #2c694e !important;
+    transform: translateY(-4px) scale(1.06) !important;
+    box-shadow: 0 10px 28px rgba(1, 45, 29, 0.4) !important;
+}
+
+.back-to-top-btn .material-symbols-outlined {
+    font-size: 26px !important;
+    color: #ffffff !important;
+}
+
+/* ==========================================================================
+   RESPONSIVE BREAKPOINTS
+   ========================================================================== */
+@media (max-width: 1140px) {
     .site-header .header-nav {
-        gap: 18px !important;
-        margin: 0 auto !important;
+        gap: 16px !important;
     }
     .site-header .header-nav a {
         font-size: 13px !important;
     }
-    .site-header .header-logo img {
-        width: 130px !important;
-    }
 }
 
-/* MOBILE */
-@media (max-width: 900px) {
+@media (max-width: 960px) {
     .site-header {
-        height: 68px !important;
+        height: 64px !important;
+        top: 0 !important;
+        width: 100% !important;
+        padding: 0 16px !important;
+        border-radius: 0 !important;
     }
     .site-header .header-container {
-        width: 90% !important;
-        padding: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
     }
-    .site-header .header-logo img {
-        width: 130px !important;
-        height: 52px !important;
+    .site-header.is-scrolled {
+        top: 6px !important;
+        width: 95% !important;
+        height: 58px !important;
+        border-radius: 9999px !important;
+        padding: 0 14px !important;
     }
     .site-header .header-nav {
         display: none !important;
@@ -255,39 +397,34 @@ html, body {
     }
     .site-header .header-actions {
         margin-left: auto !important;
-        gap: 7px !important;
-    }
-    .site-header .cart-button {
-        height: 40px !important;
-        padding: 0 13px !important;
-    }
-    .site-header .account-button {
-        width: 40px !important;
-        height: 40px !important;
+        gap: 8px !important;
     }
     .site-header .mobile-drawer {
-        position: absolute !important;
-        top: 68px !important;
-        left: 0 !important;
-        width: 100% !important;
-        background: #fff8f4 !important;
-        border-top: 1px solid #eadfd6 !important;
-        border-bottom: 1px solid #eadfd6 !important;
-        padding: 15px 20px !important;
+        position: fixed !important;
+        top: 72px !important;
+        left: 5% !important;
+        width: 90% !important;
+        max-width: 480px !important;
+        background: rgba(255, 248, 244, 0.98) !important;
+        backdrop-filter: blur(16px) !important;
+        border: 1px solid rgba(234, 223, 214, 0.9) !important;
+        border-radius: 20px !important;
+        padding: 16px !important;
         flex-direction: column !important;
-        gap: 5px !important;
-        box-shadow: 0 8px 20px rgba(36, 26, 14, 0.08) !important;
+        gap: 4px !important;
+        box-shadow: 0 12px 36px rgba(36, 26, 14, 0.14) !important;
         z-index: 1001 !important;
     }
     .site-header .mobile-drawer a {
         display: block !important;
-        padding: 13px 10px !important;
+        padding: 11px 14px !important;
         color: #241a0e !important;
         text-decoration: none !important;
         font-family: "Plus Jakarta Sans", sans-serif !important;
-        font-size: 15px !important;
+        font-size: 14.5px !important;
         font-weight: 600 !important;
-        border-radius: 8px !important;
+        border-radius: 12px !important;
+        transition: background 0.15s ease !important;
     }
     .site-header .mobile-drawer a:hover,
     .site-header .mobile-drawer a.active {
@@ -296,5 +433,11 @@ html, body {
     }
     .site-header .mobile-drawer.active {
         display: flex !important;
+    }
+    .back-to-top-btn {
+        bottom: 76px !important; /* Above mobile dock */
+        right: 18px !important;
+        width: 44px !important;
+        height: 44px !important;
     }
 }

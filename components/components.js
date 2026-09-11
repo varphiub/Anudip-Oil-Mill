@@ -69,9 +69,11 @@
 
     // Fallback template only for offline file:// protocol if fetch is blocked
     const fallbackHeader = `
-<header class="site-header">
+<header class="site-header" id="siteHeader">
     <div class="header-container">
-        <a href="home.html" class="header-logo"><img src="../public/logo_trasprent.png" alt="Anudip Oil Mill"></a>
+        <div class="header-brand-group">
+            <a href="home.html" class="header-logo"><img src="../public/logo_trasprent.png" alt="Anudip Oil Mill"></a>
+        </div>
         <nav class="header-nav">
             <a href="home.html">Home</a>
             <a href="about.html">About Us</a>
@@ -82,7 +84,7 @@
             <a href="contact.html">Contact Us</a>
         </nav>
         <div class="header-actions">
-            <a href="cart.html" class="cart-button"><span class="material-symbols-outlined">shopping_cart</span><span>Cart</span><span id="cartCounter">0</span></a>
+            <a href="cart.html" class="cart-button" title="View Cart"><span class="material-symbols-outlined">shopping_cart</span><span class="cart-btn-label">Cart</span><span id="cartCounter">0</span></a>
             <button id="menuToggle" class="menu-toggle" type="button" aria-label="Toggle navigation menu"><span class="material-symbols-outlined">menu</span></button>
         </div>
     </div>
@@ -163,6 +165,7 @@
         setupMobileMenu();
         setupSeamlessNavigation();
         syncHeaderCartCounter();
+        initScrollEffects();
     }
 
     function syncHeaderCartCounter() {
@@ -215,9 +218,62 @@
         }
     }
 
-    // 7. Navigation lifecycle
+    // 7. Scroll Effects: Fixed Pill Header Elevation & Floating Back to Top Button
+    function initScrollEffects() {
+        // Ensure Back to Top button exists in the DOM
+        let backToTopBtn = document.getElementById("backToTopBtn");
+        if (!backToTopBtn) {
+            backToTopBtn = document.createElement("button");
+            backToTopBtn.id = "backToTopBtn";
+            backToTopBtn.className = "back-to-top-btn";
+            backToTopBtn.setAttribute("type", "button");
+            backToTopBtn.setAttribute("aria-label", "Back to top of page");
+            backToTopBtn.setAttribute("title", "Back to Top");
+            backToTopBtn.innerHTML = `<span class="material-symbols-outlined">expand_less</span>`;
+            document.body.appendChild(backToTopBtn);
+
+            backToTopBtn.addEventListener("click", function () {
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
+            });
+        }
+
+        const handleScroll = function () {
+            const scrollY = window.pageYOffset || document.documentElement.scrollTop || 0;
+            const headers = document.querySelectorAll(".site-header");
+
+            // Header transformation on scroll: edge-to-edge -> floating rounded pill
+            headers.forEach(header => {
+                if (scrollY > 20) {
+                    header.classList.add("is-scrolled");
+                } else {
+                    header.classList.remove("is-scrolled");
+                }
+            });
+
+            // Back to Top button visibility
+            if (backToTopBtn) {
+                if (scrollY > 200) {
+                    backToTopBtn.classList.add("is-visible");
+                } else {
+                    backToTopBtn.classList.remove("is-visible");
+                }
+            }
+        };
+
+        if (!window._anudipScrollBound) {
+            window._anudipScrollBound = true;
+            window.addEventListener("scroll", handleScroll, { passive: true });
+        }
+        // Run initial check
+        handleScroll();
+    }
+
+    // 8. Navigation lifecycle
     function setupSeamlessNavigation() {
-        // Use native browser navigation to ensure all page scripts and stylesheets load cleanly
+        // Native browser navigation
     }
 
     // Run on DOM Ready

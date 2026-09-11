@@ -324,7 +324,7 @@ const AnudipCart = (function () {
                         <!-- Quantity & Actions -->
                         <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px;">
                             <!-- Quantity Selector -->
-                            <div style="display: flex; align-items: center; background: #fff1e6; border-radius: 999px; padding: 3px 6px; border: 1px solid #eadfd6;">
+                            <div style="display: flex; align-items: center; background: #fff5ee; border-radius: 999px; padding: 3px 6px; border: 1px solid #eadfd6;">
                                 <button type="button" onclick="AnudipCart.changeQty('${item.id}', -1)" aria-label="Decrease" style="width: 28px; height: 28px; border-radius: 50%; border: none; background: #ffffff; color: #012d1d; font-weight: bold; cursor: pointer; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
                                     <span class="material-symbols-outlined" style="font-size: 15px;">remove</span>
                                 </button>

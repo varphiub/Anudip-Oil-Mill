@@ -26,7 +26,7 @@ img {
    ========================================= */
 
 .intro {
-    background: #FFF1E6;
+    background: linear-gradient(180deg, #fff1e6 0%, #fff8f4 100%);
     padding: 45px 0 35px;
 }
 

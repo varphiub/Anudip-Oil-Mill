@@ -1,16 +1,14 @@
-<header class="site-header">
-
+<header class="site-header" id="siteHeader">
     <div class="header-container">
-
         <!-- Logo -->
-        <a href="home.html" class="header-logo">
-            <img src="../public/logo_trasprent.png" alt="Anudip Oil Mill">
-        </a>
-
+        <div class="header-brand-group">
+            <a href="home.html" class="header-logo">
+                <img src="../public/logo_trasprent.png" alt="Anudip Oil Mill">
+            </a>
+        </div>
 
         <!-- Desktop Navigation -->
         <nav class="header-nav">
-
             <a href="home.html">Home</a>
             <a href="about.html">About Us</a>
             <a href="products.html">Products</a>
@@ -18,33 +16,26 @@
             <a href="quality.html">Quality</a>
             <a href="gallery.html">Gallery</a>
             <a href="contact.html">Contact Us</a>
-
         </nav>
-
 
         <!-- Right Side -->
         <div class="header-actions">
-
             <!-- Cart -->
-            <a href="cart.html" class="cart-button">
+            <a href="cart.html" class="cart-button" title="View Cart">
                 <span class="material-symbols-outlined">shopping_cart</span>
-                <span>Cart</span>
+                <span class="cart-btn-label">Cart</span>
                 <span id="cartCounter">0</span>
             </a>
 
-            <!-- Mobile Menu -->
+            <!-- Mobile Menu Toggle -->
             <button id="menuToggle" class="menu-toggle" type="button" aria-label="Toggle navigation menu">
                 <span class="material-symbols-outlined">menu</span>
             </button>
-
         </div>
-
     </div>
 
-
-    <!-- Mobile Navigation -->
+    <!-- Mobile Navigation Drawer -->
     <div id="mobileDrawer" class="mobile-drawer">
-
         <a href="home.html">Home</a>
         <a href="about.html">About Us</a>
         <a href="products.html">Products</a>
@@ -52,7 +43,5 @@
         <a href="quality.html">Quality</a>
         <a href="gallery.html">Gallery</a>
         <a href="contact.html">Contact Us</a>
-
     </div>
-
 </header>

@@ -14,8 +14,8 @@
 ========================================= */
 
 .lab-hero {
-    background: #fff0e4;
-    border-bottom: 1px solid #eadfd6;
+    background: linear-gradient(180deg, #fff1e6 0%, #fff8f4 100%);
+    border-bottom: none;
     padding: 35px 20px 30px;
 }
 

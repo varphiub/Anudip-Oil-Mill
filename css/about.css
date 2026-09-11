@@ -2,7 +2,7 @@
 :root {
     --bg-page: var(--background, #fff8f4);
     --bg-card: var(--surface, #ffffff);
-    --bg-card-alt: var(--surface-light, #fff1e6);
+    --bg-card-alt: var(--surface-light, #fff5ee);
     --bg-accent-green: var(--primary, #012d1d);
     --bg-badge: var(--surface-medium, #ffead8);
     --border-color: var(--border, #eadfd6);
@@ -89,8 +89,9 @@ body {
 
 /* Hero Section */
 .hero-section {
-    padding: 35px 0 20px 0;
+    padding: 50px 0 42px 0;
     text-align: center;
+    background: linear-gradient(180deg, #fff1e6 0%, #fff8f4 100%);
 }
 
 .hero-badge {
@@ -259,6 +260,13 @@ body {
     gap: 12px;
 }
 
+.image-label-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--accent-green, #2c694e);
+}
+
 .heritage-figure {
     position: relative;
     border-radius: var(--radius-md);
@@ -395,6 +403,7 @@ body {
 /* Guiding Principles Section */
 .principles-section {
     padding: 70px 0;
+    background-color: var(--bg-card-alt, #fff5ee);
 }
 
 .text-center {
@@ -411,6 +420,7 @@ body {
     padding: 4px 14px;
     border-radius: var(--radius-full);
     margin-bottom: 10px;
+    text-transform: uppercase;
 }
 
 .section-title-large {
@@ -446,6 +456,7 @@ body {
     display: flex;
     flex-direction: column;
     position: relative;
+    text-align: left;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -455,24 +466,27 @@ body {
 }
 
 .icon-circle {
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.4rem;
     margin-bottom: 20px;
 }
 
+.icon-circle .material-symbols-outlined {
+    font-size: 30px;
+}
+
 .icon-green {
-    background-color: #D1FAE5;
-    color: #047857;
+    background-color: #c1ecd4;
+    color: #012d1d;
 }
 
 .icon-amber {
-    background-color: #FEF3C7;
-    color: #B45309;
+    background-color: #ffdf96;
+    color: #322400;
 }
 
 .card-label {

@@ -39,7 +39,7 @@
   --color-surface-bright: #fff8f4;
   --color-surface-dim: #ebd7c4;
   --color-surface-container-lowest: #ffffff;
-  --color-surface-container-low: #fff1e6;
+  --color-surface-container-low: #fff5ee;
   --color-surface-container: #ffead8;
   --color-surface-container-high: #fae5d1;
   --color-surface-container-highest: #f4dfcc;
@@ -118,6 +118,18 @@ a {
 }
 
 /* ---------- HERO SECTION ---------- */
+.home-hero {
+  background: linear-gradient(180deg, #fff1e6 0%, #fff8f4 100%) !important;
+  padding-top: 110px !important;
+  width: 100%;
+}
+
+@media (max-width: 960px) {
+  .home-hero {
+    padding-top: 92px !important;
+  }
+}
+
 .hero-badge-pill {
   display: inline-flex;
   align-items: center;
